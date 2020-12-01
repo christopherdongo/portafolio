@@ -3,8 +3,8 @@ import * as React from "react"
 function Gatsby(props) {
   return (
     <svg
-      width={256}
-      height={256}
+      width={2600}
+      height={2600}
       viewBox="0 0 256 256"
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="xMidYMid"

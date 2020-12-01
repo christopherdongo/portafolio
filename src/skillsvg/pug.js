@@ -6,8 +6,8 @@ function Pug(props) {
       id="prefix__Layer_1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 128 128"
-      width="100%"
-      height="100%"
+      width={2500}
+      height={1500}
       {...props}
     >
       <style>

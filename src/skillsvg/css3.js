@@ -4,8 +4,8 @@ function Css3(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="100%"
-      height="100%"
+      width={2600}
+      height={2600}
       viewBox="0 0 538.584 538.583"
       {...props}
     >

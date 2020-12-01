@@ -3,8 +3,8 @@ import * as React from "react"
 function Nodejs(props) {
   return (
     <svg
-      width="100%"
-      height="100%"
+      width={2500}
+      height={2000}
       viewBox="0 0 512 314"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
