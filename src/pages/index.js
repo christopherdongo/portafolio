@@ -8,7 +8,6 @@ export default ()=>(
   <Layout>
     <Descripcion>
     </Descripcion>
-    
   </Layout>
 )
 

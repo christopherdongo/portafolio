@@ -23,9 +23,12 @@ section {
 }
 .name h1 {
   text-align: center;
+  letter-spacing: 0.2rem;
+   transform:  matrix(1, 0, 0, 1, 0, 0);
 }
 .name p{
     font-weight: 700;
+    letter-spacing: 0.2rem;
 }
 .container-imagen {
 }

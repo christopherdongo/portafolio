@@ -29,22 +29,9 @@ const Nabvar=()=>{
                      return(
                      <li key={index}>
                          <AniLink 
-                         
-                         cover 
-                         direction="left"
-  duration={1}
-  bg="
-    url(https://source.unsplash.com/random)
-    center / cover   /* position / size */
-    no-repeat        /* repeat */
-    fixed            /* attachment */
-    padding-box      /* origin */
-    content-box      /* clip */
-    white            /* color */
-  "
+                         fade
                          
                          to={link.path} 
-                         
                          >{link.text}</AniLink>
                      </li>
                      )

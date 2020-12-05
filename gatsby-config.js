@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "BackRoads",
-    description:"Explore awesome worldwide tours & discover what makes each of them unique. Forget your daily routine & say yes to adventure",
+    title: "Portafolio",
+    description:"Portafolio de proyectos",
     author: "Christopher Dongo",
     data: {name:"christopher", year:28},
     twitterUsername:"@tdhris",

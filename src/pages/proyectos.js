@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Layout from '../components/Layout/layout';
-
+import Project from '../components/projects/project'
 
 export default class proyectos extends Component{
 
@@ -8,7 +8,7 @@ export default class proyectos extends Component{
 
         return(
             <Layout>
-                <h1>proyectos</h1>
+                <Project />
             </Layout>
         )
     }
