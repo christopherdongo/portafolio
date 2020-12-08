@@ -1,11 +1,37 @@
 import React from 'react';
+import styles from '../../css/project.module.css'
+import {graphql, useStaticQuery} from 'gatsby'
+import CardProject from './card/cardProject'
+
+const getData = graphql`
+{
+    projects:allContentfulProjects{
+      edges{
+        node{
+          contentful_id
+          title
+          repository
+          link
+          slug
+          image{
+            fluid{
+              ...GatsbyContentfulFluid_tracedSVG
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 const Project=()=>{
+    //recibiendo data content
+    const {projects} = useStaticQuery(getData)
 
     return(
-        <>
-         <h1>project</h1>
-        </>
+        <main className={styles.project}>
+         <CardProject projects={projects}  />
+        </main>
     )
 }
 

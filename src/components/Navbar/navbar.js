@@ -12,12 +12,13 @@ const Nabvar=()=>{
     const isOpenToggle=()=>{
         setOpenTogle( opentogle => !opentogle)
     }
-     console.log(opentogle)
     return(
         <nav className={styles.navbar}>
          <div className={styles.navCenter}>
              <div className={styles.navHeader}>
+                 <AniLink to="/" fade>
                  <img src={logo1} alt="logo" className={styles.logo}/>
+                 </AniLink>
                  <button type="button" className={styles.logoBtn} onClick={isOpenToggle}>
                      <FaAlignRight className={styles.logoIcon} />
                  </button>
@@ -30,7 +31,6 @@ const Nabvar=()=>{
                      <li key={index}>
                          <AniLink 
                          fade
-                         
                          to={link.path} 
                          >{link.text}</AniLink>
                      </li>

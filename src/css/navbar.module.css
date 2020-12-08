@@ -31,6 +31,7 @@
   }
   .logo{
     width: 10rem;
+    cursor: pointer;
   }
   
   .nav-links {
@@ -63,7 +64,6 @@
       bottom: -4px;
       left: 0px;
       background-color: rgba(0,0,0);
-      
   }
 
   .nav-links a:hover {

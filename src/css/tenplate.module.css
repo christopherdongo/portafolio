@@ -1,0 +1,14 @@
+.templateprojects {
+  padding-top: 2rem;
+}
+.container-slide {
+  width: 50%;
+  position: relative !important;
+  margin: auto;
+}
+.slide {
+  display: none;
+}
+.images{
+    width: 100%;
+}
