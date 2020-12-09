@@ -1,11 +1,14 @@
 .templateprojects {
   padding-top: 1.5rem;
+  margin: 2rem;
 }
 
 .images{
     min-width: 100%;
-    height: 100%;
     border-radius: 25px;
     box-shadow: var(--darkShadow);
 }
 
+.article{
+    margin: 0 1rem;
+}

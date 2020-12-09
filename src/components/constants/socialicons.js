@@ -13,7 +13,7 @@ export default [
     },
     {
         icon:<FaLinkedinIn color="hsl(201, 100%, 35%)"/>,
-        url:"https://www.linkedin.com"
+        url:"https://www.linkedin.com/in/christopher-dongo-huarancca-2509a293"
     },
     {
         icon:<FaTwitter color="hsl(203, 89%, 53%)"/>,

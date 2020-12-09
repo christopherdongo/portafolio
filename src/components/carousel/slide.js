@@ -7,9 +7,8 @@ const SContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  gap: 1rem;
   @media screen and (min-width: 768px) {
-    grid-template-columns: 35% 1fr;
+    grid-template-columns:0% 1fr;
   }
 `
 const StextWrapper = styled.div`
@@ -17,23 +16,25 @@ const StextWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
   cursor: pointer;
+  min-width:100%;
+ 
+  h1{
+    font-size: 2rem;
+    color:white;
+  }
   @media screen and (min-width: 768px) {
   }
 `
-const Slide = ({ fluid }) => {
+const Slide = ({ fluid, title }) => {
   console.log(fluid)
   return (
     <SContainer>
       <StextWrapper>
-        <h1>slide</h1>
-        <p>
-          Cupidatat non do exercitation aliquip aliqua sunt in exercitation elit
-          non irure ullamco.
-        </p>
+        <h1>{title}</h1>
       </StextWrapper>
       <Img fluid={fluid} alt="img slide" className={styles.images} />
+
     </SContainer>
   )
 }

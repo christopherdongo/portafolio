@@ -23,14 +23,22 @@ const Template = ({ data }) => {
   
   return (
     <Layout>
+          
       <main className={styles.templateprojects}>
+      
         <Carousel>
              {
                Projectimages.map( (item, index)=>(
-                   <Slide key={index} fluid={item.fluid} />
+                   <Slide key={index} fluid={item.fluid} title={title} />
                ))
              }
         </Carousel>
+        <article className={styles.article}>
+          <div>
+            <p>{description}</p>
+          </div>
+          
+        </article>
  
       </main>
     </Layout>
