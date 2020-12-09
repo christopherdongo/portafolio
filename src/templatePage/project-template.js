@@ -25,6 +25,8 @@ const Template = ({ data }) => {
     <Layout>
           
       <main className={styles.templateprojects}>
+
+       <h2>{title}</h2>
       
         <Carousel>
              {

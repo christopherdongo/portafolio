@@ -10,8 +10,6 @@ const getData = graphql`
         node{
           contentful_id
           title
-          repository
-          link
           slug
           image{
             fluid{

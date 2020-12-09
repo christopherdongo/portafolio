@@ -6,11 +6,10 @@
 .card-center{
     display: grid;
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1rem;
     margin: 1rem;
 }
 .card{
-    border:1px solid var(--mainWhite);
     box-shadow: var(--darkShadow);
 }
 .card:hover{
@@ -21,7 +20,6 @@
     position: relative;
     background: var(--primaryColor);
     transition: var(--mainTransition);
-    margin: 1rem;
   }
   .imagen{
     transition: var(--mainTransition);
@@ -82,7 +80,7 @@ width: 100%;
 /*media query*/
 @media screen and (min-width: 768px) and (max-width:992px){
     .card-center{
-       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+       grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
         row-gap: 2rem;
     }
 }

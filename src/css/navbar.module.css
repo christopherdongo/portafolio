@@ -26,7 +26,6 @@
     cursor: pointer;
   }
   .logo-icon {
-    color: var(--primaryColor);
     font-size: 1.5rem;
   }
   .logo{

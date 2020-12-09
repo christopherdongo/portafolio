@@ -1,14 +1,15 @@
 .templateprojects {
-  padding-top: 1.5rem;
-  margin: 2rem;
+  padding-top: 1.2rem;
 }
-
+.templateprojects h2{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 2rem;
+}
 .images{
     min-width: 100%;
-    border-radius: 25px;
     box-shadow: var(--darkShadow);
 }
-
 .article{
-    margin: 0 1rem;
+    margin: 0 0.5rem;
 }

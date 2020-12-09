@@ -18,6 +18,7 @@ const StextWrapper = styled.div`
   align-items: center;
   cursor: pointer;
   min-width:100%;
+  height:0px;
  
   h1{
     font-size: 2rem;
@@ -27,7 +28,6 @@ const StextWrapper = styled.div`
   }
 `
 const Slide = ({ fluid, title }) => {
-  console.log(fluid)
   return (
     <SContainer>
       <StextWrapper>
