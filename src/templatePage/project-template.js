@@ -3,8 +3,8 @@ import Layout from "../components/Layout/layout"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { graphql, useStaticQuery } from "gatsby"
 import styles from "../css/tenplate.module.css"
-import Carousel from '../components/carrusel/carousel'
-import Slide from '../components/carrusel/slide'
+import Carousel from '../components/carousel/carousel'
+import Slide from '../components/carousel/slide'
 
 const Template = ({ data }) => {
   //destructuring

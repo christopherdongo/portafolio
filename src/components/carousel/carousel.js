@@ -3,31 +3,58 @@ import styled, {css} from "styled-components"
 
 const ContainerCarousel = styled.div`
  display:flex;
- flex-direction:column;
+ justify-content:center;
+ 
 `
+const ButttonSlide =styled.button`
+background:white;
+border: 0px;
+cursor:pointer;
+::after{
+  border: 0px;
+}
+svg{
+  width:3rem;
+  height:2rem;
+  cursor:pointer;
+}
+ `
 const CarruselWrapper = styled.div`
   display: flex;
+  margin: 1rem;
 `;
-const SCarouselSlide = styled.div`
+const CarouselSlide = styled.div`
   flex: 0 0 auto;
   opacity: ${props =>(props.active ? 1 : 0)};
   transition: all 0.5s ease;
   width: 100%;
+`
+const ContainerButton= styled.div`
+ display:flex;
+ justify-content:center;
+
+ button{
+   margin: 0 3rem;
+ }
 `
 
 const SCarouselSlides = styled.div`
  display:flex;
  ${props => props.currentSlide && css` transform: translateX(-${props.currentSlide * 100}%)`
 };
-transition: all 0.5s ease;
+transition: all 0.7s ease;
 `
 const Carousel = ({ children}) => {
 
   //stados
   const [currentSlide, setCurrentSlide] = useState(0)
 
+     setTimeout(()=>{
+      setCurrentSlide((currentSlide -1 + activeSlide.length) % activeSlide.length)
+     },4000)
+
   const activeSlide = children.map((slide, index) => 
-  <SCarouselSlide active={currentSlide===index} key={index}>{slide}</SCarouselSlide>)
+  <CarouselSlide active={currentSlide===index} key={index}>{slide}</CarouselSlide>)
 
   return (
     <ContainerCarousel>
@@ -36,18 +63,21 @@ const Carousel = ({ children}) => {
           {activeSlide}
           </SCarouselSlides>
       </CarruselWrapper>
-      <div>
-      <button
+
+      {/*
+      <ContainerButton>
+      <ButttonSlide
        onClick={ ()=> setCurrentSlide((currentSlide -1 + activeSlide.length) % activeSlide.length)}
       >
-        Left
-      </button>
-      <button
+        <AiOutlineLeft />
+      </ButttonSlide>
+      <ButttonSlide
       onClick={ ()=> setCurrentSlide((currentSlide + 1) % activeSlide.length)}
       >
-        Right
-      </button>
-      </div>
+        <AiOutlineRight />
+      </ButttonSlide>
+      </ContainerButton>
+      */}
     </ContainerCarousel>
   )
 }
