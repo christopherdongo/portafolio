@@ -13,7 +13,7 @@ const getData = graphql`
           slug
           image{
             fluid{
-              ...GatsbyContentfulFluid_tracedSVG
+              ...GatsbyContentfulFluid
             }
           }
         }

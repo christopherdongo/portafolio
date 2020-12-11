@@ -24,6 +24,7 @@ const Nabvar=()=>{
                  </button>
              </div>
 
+            <div className={styles.containerLinks}>
             <ul className={opentogle? `${styles.navLinks} ${styles.showNav}` : `${styles.navLinks}`}>
                 {
                  links.map( (link, index) =>{
@@ -38,6 +39,10 @@ const Nabvar=()=>{
                  })
                 }
             </ul>
+            <div className={styles.linksvacio}>
+                        
+            </div>
+            </div>
 
             <div className={styles.navSocialLinks}>
                 {socialicons.map( (icons, index)=>{

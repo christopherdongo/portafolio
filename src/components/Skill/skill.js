@@ -5,7 +5,7 @@ import skill from '../constants/skill'
 const Skill=()=>{
 
     return(
-        <section>
+        <section class={styles.sectionPrincipal}>
          <div className={styles.card}>
               { skill.map( (skill, index)=>{
                   return(
@@ -13,9 +13,9 @@ const Skill=()=>{
                          <picture className={styles.containerIcon}>
                           {skill.icon}
                          </picture>
-                         <div className={styles.nameSkill}>
+                        {/* <div className={styles.nameSkill}>
                             <h1>{skill.name}</h1>
-                         </div>
+                         </div>*/}
                       </article>
                   )
               })}
