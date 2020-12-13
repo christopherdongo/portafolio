@@ -27,7 +27,7 @@ export default [
     icon: <Css3 />,
   },
   {
-    name: "Html",
+    name: "Html5",
     icon: <Html5 />,
   },
   {
@@ -59,7 +59,7 @@ export default [
     icon: <Nodejs />,
   },
   {
-    name: "Bootstrap",
+    name: "Bootstrap4",
     icon: <Bootstrap />,
   },
   {

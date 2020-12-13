@@ -1,15 +1,88 @@
 .templateprojects {
   padding-top: 1.2rem;
 }
-.templateprojects h2{
-    text-align: center;
-    text-transform: capitalize;
-    font-size: 2rem;
+.templateprojects h2 {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 2rem;
 }
-.images{
-    min-width: 100%;
+.images {
+  min-width: 100%;
+  box-shadow: var(--darkShadow);
+}
+.article {
+  display: grid;
+  margin: 0 2rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+.descriptionProjects{
+    padding-top: 2rem;
+}
+.descriptionProjects p{
+    padding-top: 1rem;
+}
+.contain-button {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.repository {
+  cursor: pointer;
+  font-size: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: var(--darkShadow);
+}
+.repository svg {
+  cursor: pointer;
+  color: hsl(0, 5%, 9%);
+}
+.repository:hover{
+    background-color: black;
+    border:2px solid black;
+}
+.repository svg path:hover{
     box-shadow: var(--darkShadow);
 }
-.article{
-    margin: 0 0.5rem;
+.repository svg:hover{
+  color: white;
+}
+.link {
+  cursor: pointer;
+  font-size: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  border-radius:50%;
+}
+.link svg {
+  cursor: pointer;
+  color: hsl(215, 79%, 22%);
+}
+.link:hover{
+    background-color:hsl(215, 79%, 22%);
+    box-shadow: var(--darkShadow);
+}
+.link svg:hover{
+  color: white;
+}
+
+.technology {
+}
+
+/*media query*/
+@media screen and (min-width: 768px) {
+  .article {
+    grid-template-columns: repeat(2, 1fr);
+    grid-row: 1fr;
+  }
+  .technology {
+    grid-column: 1/4;
+  }
 }
