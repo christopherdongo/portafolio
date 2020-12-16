@@ -32,7 +32,6 @@
     width: 10rem;
     cursor: pointer;
   }
-  
   .nav-links {
     list-style-type: none;
     transition: var(--mainTransition);
@@ -44,7 +43,6 @@
     transition-delay: all 2s ease;
     background: white;
   }
-
   .nav-links a {
     display: block;
     padding: 1rem 1.25rem;
@@ -72,8 +70,10 @@
   .nav-social-links {
     display: none;
   }
-  @media screen and (min-width: 576px) {
-
+  @media screen and (max-width: 576px) {
+    .show-nav{
+      height: 550px;
+    }
   }
   @media screen and (min-width: 360px) and (max-width:991px){
     .nav-links{
