@@ -2,6 +2,8 @@ import React from "react"
 import styles from "../../css/contact.module.css"
 import { Formik, Form, Field, ErrorMessage } from "formik"
 const Contact = () => {
+
+ /*funcion para codificar los datos que se enviara a netlify*/ 
   const encode = data => {
     return Object.keys(data)
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -17,13 +19,14 @@ const Contact = () => {
           message: "",
         }}
         onSubmit={(values, actions) => {
+          /*enviar los datos a netlify*/ 
           fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({ "form-name": "contact", ...values }),
           })
             .then(() => {
-              alert("Success")
+              alert("Su correo su enviado")
               actions.resetForm()
             })
             .catch(() => {
@@ -54,7 +57,7 @@ const Contact = () => {
         >
           <div>
             <label htmlFor="name" className={styles.label}>
-              Name<span className={styles.span}>*</span>:{" "}
+              Nombre<span className={styles.span}>*</span>:{" "}
             </label>
             <Field type="text" name="name" className={styles.input} />
             <span className={styles.error}>
@@ -64,7 +67,7 @@ const Contact = () => {
 
           <div>
             <label htmlFor="email" className={styles.label}>
-              Email<span className={styles.span}>*</span>:{" "}
+              Correo<span className={styles.span}>*</span>:{" "}
             </label>
             <Field type="email" name="email" className={styles.input} />
            <span className={styles.error}>
@@ -74,7 +77,7 @@ const Contact = () => {
 
           <div>
             <label htmlFor="message" className={styles.label}>
-              Message<span className={styles.span}>*</span>:{" "}
+              Mensaje<span className={styles.span}>*</span>:{" "}
             </label>
             <Field
               cols="50"

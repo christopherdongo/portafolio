@@ -1,31 +1,15 @@
 import React from "react"
 import styles from "../../css/descripcion.module.css"
-import Img from 'gatsby-image'
-//import logo from "../../images/christopher_dongo.jpg"
-import {graphql, useStaticQuery} from 'gatsby'
+import logo from "../../images/christopher_dongo.jpg"
 
 
-const query = graphql`
-query defaultPerfile{
-  defaultPerfile:file(relativePath:{eq:"christopher_dongo.jpg"}){
-    childImageSharp{
-      fluid(maxWidth:600){
-        ...GatsbyImageSharpFluid_tracedSVG
-      }
-    }
-  }
-  }
-`
 const Descripcion = () => {
   
-  const image = useStaticQuery(query);
-
   return (
     <section className={styles.container}>
       <div className={styles.firsRows}>
         <div className={styles.containerImagen}>
-          <Img fluid={image.defaultPerfile.childImageSharp.fluid}  className={styles.avatar} alt="photo-perfil"/>
-          {/*<img src={logo} alt="img" className={styles.avatar} />*/}
+          <img src={logo} alt="img" className={styles.avatar} />
         </div>
         <div className={styles.name}>
           <h1>Christopher Dongo Huarancca</h1>

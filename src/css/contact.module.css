@@ -40,7 +40,6 @@
     height: 2rem;
     border-radius: 3px;
     border:1.5px solid black;
-    border:0px 0px 0px 0px;
 }
 .input::placeholder{
     font-size: 1rem;
@@ -70,9 +69,10 @@
 }
 .error{
     color: var(--error);
-   
 }
-
+.error-line{
+    border: 1.5px solid var(--error);
+}
 .send{
     font-size: 1.2rem;
     font-weight: 700;
@@ -91,14 +91,11 @@
 
 
 /*media querys*/
-
-
 @media screen and (min-width:425px) and (max-width:768px){
     .container-contact{
         width: 80%;
     }
 }
-
 @media screen and (min-width: 768px){
     .container-contact{
         width: 60%;

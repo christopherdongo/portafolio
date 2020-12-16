@@ -6,6 +6,7 @@ const Skill=()=>{
 
     return(
         <section className={styles.sectionPrincipal}>
+            <h1>Mis Habilidades</h1>
          <div className={styles.card}>
               { skill.map( (skill, index)=>{
                   return(
