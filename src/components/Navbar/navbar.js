@@ -16,10 +16,10 @@ const Nabvar=()=>{
         <nav className={styles.navbar}>
          <div className={styles.navCenter}>
              <div className={styles.navHeader}>
-                 <AniLink to="/" fade>
+                 <AniLink to="/" fade >
                  <img src={logo1} alt="logo" className={styles.logo}/>
                  </AniLink>
-                 <button type="button" className={styles.logoBtn} onClick={isOpenToggle}>
+                 <button type="button" className={styles.logoBtn} onClick={isOpenToggle} aria-label="boton que permite el menu deslisable">
                      <FaAlignRight className={styles.logoIcon} />
                  </button>
              </div>
@@ -33,6 +33,7 @@ const Nabvar=()=>{
                          <AniLink 
                          fade
                          to={link.path} 
+                         aria-label="Read more about Seminole tax hike"
                          >{link.text}</AniLink>
                      </li>
                      )
