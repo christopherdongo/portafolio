@@ -14,7 +14,7 @@
   display: grid;
   margin: 0 2rem;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2,1fr);
 }
 .descriptionProjects{
     padding-top: 2rem;
@@ -73,16 +73,38 @@
   color: white;
 }
 
-.technology {
+.container-technology article{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem;
 }
-
+/*css del template*/
+.container-technology{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px,220px));
+  gap: 1rem;
+  place-content: center;
+  place-items: center;
+  padding-top: 3rem;
+}
+.technology-icon{
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+}
+.technology-icon svg{
+  height: 80%;
+  width: 80% !important;
+}
 /*media query*/
 @media screen and (min-width: 768px) {
   .article {
     grid-template-columns: repeat(2, 1fr);
-    grid-row: 1fr;
   }
   .technology {
     grid-column: 1/4;
   }
 }
+

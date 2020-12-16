@@ -34,7 +34,6 @@ const Slide = ({ fluid, title }) => {
         <h1>{title}</h1>
       </StextWrapper>
       <Img fluid={fluid} alt="img slide" className={styles.images} />
-
     </SContainer>
   )
 }

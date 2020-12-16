@@ -2,11 +2,11 @@ import React from "react"
 import Layout from "../components/Layout/layout"
 import { graphql } from "gatsby"
 import styles from "../css/tenplate.module.css"
-import Carousel from '../components/carousel/carousel'
-import Slide from '../components/carousel/slide'
-import {VscGithubInverted}  from 'react-icons/vsc'
-import {BiLinkAlt} from 'react-icons/bi'
-import Technology from '../components/technology/technology'
+import Carousel from "../components/carousel/carousel"
+import Slide from "../components/carousel/slide"
+import { VscGithubInverted } from "react-icons/vsc"
+import { BiLinkAlt } from "react-icons/bi"
+import Technology from "../components/technology/technology"
 
 const Template = ({ data }) => {
   //destructuring
@@ -22,45 +22,50 @@ const Template = ({ data }) => {
 
   //desctructuring imagen
   const [...Projectimages] = views
-  
-  /*convertir a arrays*/ 
-  const Tecnologies = Object.values(technology[0]).filter(node => node!=null)
+
+  /*convertir a arrays*/
+  const Tecnologies = Object.values(technology[0]).filter(node => node != null)
 
   return (
     <Layout>
-          
       <main className={styles.templateprojects}>
+        <h2>{title}</h2>
 
-       <h2>{title}</h2>
-      
         <Carousel>
-             {
-               Projectimages.map( (item, index)=>(
-                   <Slide key={index} fluid={item.fluid} title={title} />
-               ))
-             }
+          {Projectimages.map((item, index) => (
+            <Slide key={index} fluid={item.fluid} title={title} />
+          ))}
         </Carousel>
-        <article className={styles.article}>
+        <section className={styles.article}>
           <div className={styles.descriptionProjects}>
-              <h2>Descripcion</h2>
+            <h2>Descripcion</h2>
             <p>{description}</p>
           </div>
           <div className={styles.containButton}>
-          <a className={styles.repository} href={repository} target="_blank" rel="noreferrer"><VscGithubInverted  /></a>
-            <a className={styles.link} href={link} target="_blank" rel="noreferrer"><BiLinkAlt /></a>
+            <a
+              className={styles.repository}
+              href={repository}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <VscGithubInverted />
+            </a>
+            <a
+              className={styles.link}
+              href={link}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <BiLinkAlt />
+            </a>
           </div>
           <div className={styles.technology}>
-                 <h2>tecnologias</h2>
-                 {/*
-                  Tecnologies.filter(node => node!=null).map((node, index)=>(
-                    <p key={index}>{node}</p>
-                  ))
-                  */}
-                  <Technology  Tecnologies={Tecnologies}/>
+            <h2>tecnologias</h2>
+            <div className={styles.containerTechnology}>
+              <Technology Tecnologies={Tecnologies} />
+            </div>
           </div>
-
-        </article>
- 
+        </section>
       </main>
     </Layout>
   )
@@ -75,7 +80,7 @@ export const query = graphql`
       repository
       link
       slug
-      technology{
+      technology {
         Css
         Gulp
         Html5

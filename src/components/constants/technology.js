@@ -13,7 +13,10 @@ import Linux from "../../skillsvg/linux";
 import Gatsby from "../../skillsvg/gatsby";
 import Gulp from "../../skillsvg/gulp";
 import Github from "../../skillsvg/github";
+import SqlServer from "../../skillsvg/sqlserver";
+import Mysql from "../../skillsvg/mysql";
 import Bash from '../../skillsvg/bash';
+import ReactRouter from '../../skillsvg/reactrouter';
 
 export default [
   {
@@ -39,6 +42,14 @@ export default [
   {
     name: "Gatsby",
     icon: <Gatsby />,
+  },
+  {
+    name: "Sql-Server",
+    icon: <SqlServer />,
+  },
+  {
+      name:"Mysql",
+      icon:<Mysql />
   },
   {
     name: "MongoDB",
@@ -70,5 +81,9 @@ export default [
   },{
     name:"Bash",
     icon:<Bash />
+  },
+  {
+    name:"ReactRouter",
+    icon:<ReactRouter />
   }
 ]

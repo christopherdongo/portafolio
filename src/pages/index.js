@@ -4,8 +4,8 @@ import Descripcion from '../components/Home/descripcion'
 
 export default ()=>(
   <Layout>
-    <Descripcion>
-    </Descripcion>
+    <Descripcion />
+
   </Layout>
 )
 

@@ -5,7 +5,7 @@ import skill from '../constants/skill'
 const Skill=()=>{
 
     return(
-        <section class={styles.sectionPrincipal}>
+        <section className={styles.sectionPrincipal}>
          <div className={styles.card}>
               { skill.map( (skill, index)=>{
                   return(
