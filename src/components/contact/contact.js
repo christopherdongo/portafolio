@@ -1,88 +1,99 @@
 import React from "react"
 import styles from "../../css/contact.module.css"
-import { useFormik } from "formik"
-import * as Yup from "yup"
-import Alert from '../alerta/alert'
+import { Formik, Form, Field, ErrorMessage } from "formik"
 const Contact = () => {
-
-    const formik = useFormik({
-        initialValues:{
-            name:"",
-            email:"",
-            message:""
-        },
-        validationSchema:Yup.object({
-            name: Yup.string().required("El Nombre es Obligatorio"),
-            email:Yup.string().email('El email no es valido').required("El email es Obligatorio"),
-            message:Yup.string().required('El mensaje es obligatorio')
-        }),
-        onSubmit:(valores)=>{
-            console.log(valores.email)
-            Reset();
-        }
-    });
-
-  //resetar los campos
-    const Reset=()=>{
-        formik.values.name="";
-        formik.values.email="";
-        formik.values.message="";
-    }
-
+  const encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&")
+  }
 
   return (
     <main className={styles.containerContact}>
-      <form className={styles.form}
-      onSubmit={formik.handleSubmit}
+      <Formik
+        initialValues={{
+          name: "",
+          email: "",
+          message: "",
+        }}
+        onSubmit={(values, actions) => {
+          fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "contact-demo", ...values }),
+          })
+            .then(() => {
+              alert("Success")
+              actions.resetForm()
+            })
+            .catch(() => {
+              alert("Error")
+            })
+            .finally(() => actions.setSubmitting(false))
+        }}
+        validate={values => {
+          const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+          const errors = {}
+          if (!values.name) {
+            errors.name = "Name Required"
+          }
+          if (!values.email || !emailRegex.test(values.email)) {
+            errors.email = "Valid Email Required"
+          }
+          if (!values.message) {
+            errors.message = "Message Required"
+          }
+          return errors
+        }}
       >
-      <h1>Contactame</h1>
-        <div className={styles.line}></div>
-        <div>
-          <label htmlFor="name">Nombre <span className={styles.span}>*</span></label>
-          <input 
-          type="text" 
-          id="name" 
-          value={formik.values.name}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}  
-          placeholder="Nombre"
-          className={ formik.errors.name ? styles.error : null }
-          />
-          <Alert message={formik.errors.name} />
-        </div>
-        <div>
-          <label htmlFor="email">Correo <span className={styles.span}>*</span></label>
-          <input
-          id="email" 
-          type="text"
-          values={formik.values.email} 
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          placeholder="Correo"
-          className={ formik.errors.name ? styles.error : null }
-          />
-          <Alert message={formik.errors.email} />
+        <Form
+          className={styles.form}
+          method="POST"
+          name="contact" 
+          data-netlify={true}
+        >
+          <div>
+            <label htmlFor="name" className={styles.label}>
+              Name<span className={styles.span}>*</span>:{" "}
+            </label>
+            <Field type="text" name="name" className={styles.input} />
+            <span className={styles.error}>
+           <ErrorMessage name="name" />
+           </span>
+          </div>
 
-        </div>
-        <div>
-          <label htmlFor="message">Mensaje <span className={styles.span}>*</span></label>
-          <textarea 
-          type="text" 
-          cols="50" 
-          rows="12"
-          id="message"
-          values={formik.values.message}
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur} 
-          placeholder="Mensaje"
-          className={ formik.errors.name ? styles.error : null }
-          ></textarea>
-          <Alert message={formik.errors.message} />
+          <div>
+            <label htmlFor="email" className={styles.label}>
+              Email<span className={styles.span}>*</span>:{" "}
+            </label>
+            <Field type="email" name="email" className={styles.input} />
+           <span className={styles.error}>
+           <ErrorMessage name="email" />
+           </span>
+          </div>
 
-        </div>
+          <div>
+            <label htmlFor="message" className={styles.label}>
+              Message<span className={styles.span}>*</span>:{" "}
+            </label>
+            <Field
+              cols="50"
+              rows="12"
+              type="text"
+              name="message"
+              component="textarea"
+              className={styles.message}
+            />
+                       <span className={styles.error}>
+           <ErrorMessage name="message" />
+           </span>
+          </div>
 
-        <input type="submit" value="Enviar" className={styles.send}  />
-      </form>
+          <button className={styles.send} type="submit">
+            Send
+          </button>
+        </Form>
+      </Formik>
     </main>
   )
 }

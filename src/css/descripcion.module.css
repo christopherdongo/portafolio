@@ -32,14 +32,25 @@ section {
 }
 
 .avatar {
+  position: absolute;
   display: block;
   margin: auto;
-  width:50%;
-  height: 50%;
-  border-radius: 50%;
+  max-width:100%;
+  height: 300px;
   border: 10px solid white;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0px 4px;
 }
+.avatar img{
+  position: absolute !important;
+}
+.img{
+  position: relative !important;
+}
+picture img {
+  position:  absolute !important;
+}
+
+
 .description{
     margin-top:2rem;
 }
@@ -75,5 +86,9 @@ section {
   }
   .description p{
     grid-column: 3/6;
+  }
+
+  .avatar img{
+    position: absolute !important;
   }
 }

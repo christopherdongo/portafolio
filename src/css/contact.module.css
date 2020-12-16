@@ -36,25 +36,22 @@
     border: 2px solid black;
     box-shadow: var(--lightShadow);
 }
-input{
+.input{
     height: 2rem;
-    border-radius: 5px;
+    border-radius: 3px;
     border:1.5px solid black;
     border:0px 0px 0px 0px;
 }
-input::placeholder{
+.input::placeholder{
     font-size: 1rem;
     font-weight: 400;
     font-family:sans-serif;
 }
-input:focus{
-   
-}
-input[type=text]{
+.input[type=text]{
   padding-left: 10px;
   padding-right: 10px;
 }
-label{
+.label{
     font-weight: 700;
     font-family: 'Courier New', Courier, monospace;
     padding-bottom: 10px;
@@ -63,16 +60,17 @@ label{
     color: red;
     font-size: 1.2rem;
 }
-textarea{
+.message{
     width: 100%;
     border-radius: 10px;
     border: 1.5px solid black;
 }
-textarea[type=text]{
+.message[type=text]{
  padding: 10px;
 }
 .error{
-    border: 2px solid var(--error);
+    color: var(--error);
+   
 }
 
 .send{
@@ -95,7 +93,13 @@ textarea[type=text]{
 /*media querys*/
 
 
-@media screen and (min-width:575px){
+@media screen and (min-width:425px) and (max-width:768px){
+    .container-contact{
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 768px){
     .container-contact{
         width: 60%;
     }
