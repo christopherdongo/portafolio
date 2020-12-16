@@ -1,19 +1,22 @@
 .container-contact{
- display: grid;
- grid-template-columns: 1fr;
+ width: 90%;
+ margin-top: 1.5rem;
+ margin-left: auto;
+ margin-right: auto;
+ min-height: 70vh;
  background-color:var(--gradien1);
- place-content: center;
- place-items: center;
+
 }
 .container-contact h1{
     text-align: center;
     display: flex;
     justify-content: center;
+    color: var(--clr-primary-1);;
 }
 .form{
     margin: 2rem;
-    min-width:60%;
-    height: 600px;
+    min-width:50%;
+    height: 570px;
     background-color: var(--mainWhite);
     display: flex;
     flex-direction: column;
@@ -74,9 +77,26 @@ textarea[type=text]{
 
 .send{
     font-size: 1.2rem;
+    font-weight: 700;
     width: 80%;
-    height: 30px;
+    height: 40px;
     border-radius: 5px;
+    border: 0px;
+    color: white;
     cursor:pointer;
-    background-color: #e7e7e7;
+    background-color: var(--clr-primary-1);
+}
+.send:hover{
+    background-color: var(--clr-primary-2);
+    transition: 1s all ease ;
+}
+
+
+/*media querys*/
+
+
+@media screen and (min-width:768px){
+    .container-contact{
+        width: 70%;
+    }
 }
