@@ -46,7 +46,6 @@
     transition: var(--mainTransition);
     cursor: pointer;
     border-radius: 25px;
-
 }
 .link:hover {
     background: var(--mainWhite);
