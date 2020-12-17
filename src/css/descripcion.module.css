@@ -1,6 +1,9 @@
-section {
+.container {
   background-image: white;
-  margin: 2em;
+  margin:3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
 .firs-rows {
   display: flex;
@@ -8,11 +11,7 @@ section {
   justify-content: center;
   align-items: center;
 }
-.container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grip-column-gap: 3rem;
-}
+
 .name {
   padding-top: 20px;
   display: grid;
@@ -36,21 +35,10 @@ section {
   margin: auto;
   border-radius: 50%;
   max-width:100%;
-  height: 350px;
+  height: 320px;
   border: 10px solid white;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0px 4px;
 }
-.avatar img{
-  position: absolute !important;
-}
-.img{
-  position: relative !important;
-}
-picture img {
-  position:  absolute !important;
-}
-
-
 .description{
     margin-top:2rem;
 }
@@ -59,11 +47,7 @@ picture img {
     font-size: 1rem;
     font-weight: bold;
 }
-
 @media screen and (min-width: 768px) {
-  section{
-   height: 80vh;
-  }
   .firs-rows {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -91,7 +75,4 @@ picture img {
     grid-column: 3/6;
   }
 
-  .avatar img{
-    position: absolute !important;
-  }
 }

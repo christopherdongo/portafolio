@@ -38,13 +38,13 @@ const Contact = () => {
           const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
           const errors = {}
           if (!values.name) {
-            errors.name = "Name Required"
+            errors.name = "Nombre Requerido"
           }
           if (!values.email || !emailRegex.test(values.email)) {
-            errors.email = "Valid Email Required"
+            errors.email = "Correo no Valido"
           }
           if (!values.message) {
-            errors.message = "Message Required"
+            errors.message = "Mensaje Requerido"
           }
           return errors
         }}
@@ -55,6 +55,8 @@ const Contact = () => {
           name="contact" 
           data-netlify={true}
         >
+          <h1>Contactame</h1>
+          <div className={styles.line}></div>
           <div>
             <label htmlFor="name" className={styles.label}>
               Nombre<span className={styles.span}>*</span>:{" "}
