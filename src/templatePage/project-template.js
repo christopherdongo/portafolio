@@ -2,11 +2,12 @@ import React from "react"
 import Layout from "../components/Layout/layout"
 import { graphql } from "gatsby"
 import styles from "../css/tenplate.module.css"
-import Carousel from "../components/carousel/carousel"
-import Slide from "../components/carousel/slide"
+//import Carousel from "../components/carousel/carousel"
+//import Slide from "../components/carousel/slide"
 import { VscGithubInverted } from "react-icons/vsc"
 import { BiLinkAlt } from "react-icons/bi"
 import Technology from "../components/technology/technology"
+import Example from '../components/carousel/newcarousel'
 
 const Template = ({ data }) => {
   //destructuring
@@ -29,17 +30,17 @@ const Template = ({ data }) => {
   return (
     <Layout>
       <main className={styles.templateprojects}>
-        <h2>{title}</h2>
-
-        <Carousel>
+      <h1 className={styles.texto}>{title}</h1>
+      {/*  <Carousel>
           {Projectimages.map((item, index) => (
             <Slide key={index} fluid={item.fluid} title={title} />
           ))}
-        </Carousel>
+          </Carousel>*/}
+           <Example Projectimages={Projectimages} title={title}/>
         <section className={styles.article}>
           <div className={styles.descriptionProjects}>
             <h2>Descripcion</h2>
-            <p>{description}</p>
+            <p className={styles.texto}>{description}</p>
           </div>
           <div className={styles.containButton}>
             <a
@@ -92,13 +93,17 @@ export const query = graphql`
         Bootstrap4
         NodeJS
         ExpressJS
+        Gatsby
+        GQL
+        Contentfull
+        StyledComponents
       }
       description {
         description
       }
       views {
         fluid {
-          ...GatsbyContentfulFluid
+          ...GatsbyContentfulFluid_tracedSVG
         }
       }
     }

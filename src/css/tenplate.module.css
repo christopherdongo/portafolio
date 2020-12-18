@@ -1,5 +1,6 @@
 .templateprojects {
   padding-top: 2rem;
+ min-height: 100vh;
 }
 .templateprojects h2 {
   text-align: center;
@@ -8,7 +9,14 @@
 }
 .images {
   min-width: 100%;
+  height:100%;
+  display: block;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0;
   box-shadow: var(--darkShadow);
+  border-radius: 25px;
 }
 .article {
   display: grid;
@@ -72,21 +80,23 @@
 .link svg:hover{
   color: white;
 }
-
-.container-technology article{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 1rem;
-}
 /*css del template*/
 .container-technology{
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px,220px));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 2rem;
   place-content: center;
   place-items: center;
-  padding-top: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border-radius: 10px;
+  width:70%;
 }
 .technology-icon{
 display: flex;
@@ -94,16 +104,47 @@ align-items: center;
 justify-content: center;
 cursor: pointer;
 }
+.container:hover{
+  transform: scale(1.03);
+  box-shadow: 0px 0px 8px -0px rgba(0, 0, 0, 0.38);
+}
+/*
+.technology-icon:hover{
+  transform: scale(1.03);
+  box-shadow: 0 26px 50px -10px rgba(0, 0, 0, 0.38);
+}*/
 .technology-icon svg{
-  height: 80%;
-  width: 80% !important;
+  height: 120px;
+  width: 120px !important;
+  
+}
+.texto{
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+/*carousel*/
+.Carousel{
+  width: 100%;
+  margin: auto auto;
 }
 /*media query*/
 @media screen and (min-width: 768px) {
+  .Carousel{
+    width: 70%;
+    height: 400px;
+  }
+
+  .container-technology{
+    gap: 1rem;
+  }
   .article {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
   }
   .technology {
+    margin-top: 2rem;
     grid-column: 1/4;
   }
 }

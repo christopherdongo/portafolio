@@ -13,7 +13,7 @@ const getData = graphql`
           slug
           image{
             fluid{
-              ...GatsbyContentfulFluid
+              ...GatsbyContentfulFluid_tracedSVG
             }
           }
         }
@@ -28,6 +28,7 @@ const Project=()=>{
 
     return(
         <main className={styles.project}>
+           <h1>Proyectos</h1>
          <CardProject projects={projects}  />
         </main>
     )

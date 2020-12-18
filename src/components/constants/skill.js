@@ -14,7 +14,7 @@ import Gatsby from "../../skillsvg/gatsby";
 import Gulp from "../../skillsvg/gulp";
 import Github from "../../skillsvg/github";
 import Bash from '../../skillsvg/bash';
-import StyledComponents from '../../skillsvg/styledcomponents'
+import StyledComponents from '../../skillsvg/styledcomponents';
 
 export default [
   {

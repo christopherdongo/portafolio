@@ -25,6 +25,7 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^3.11.0",
     "styled-components": "^5.2.1",
+    "styled-components-carousel": "^0.2.0",
     "yup": "^0.32.8"
   },
   "devDependencies": {
