@@ -72,6 +72,7 @@
 .link svg {
   cursor: pointer;
   color: hsl(215, 79%, 22%);
+  
 }
 .link:hover{
     background-color:hsl(215, 79%, 22%);
@@ -103,6 +104,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 cursor: pointer;
+border-radius: 50%;
 }
 .container:hover{
   transform: scale(1.03);
@@ -116,6 +118,7 @@ cursor: pointer;
 .technology-icon svg{
   height: 120px;
   width: 120px !important;
+  border-radius: 70%;
   
 }
 .texto{

@@ -15,7 +15,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1rem;
-    
   }
   .logo-btn {
     background: transparent;
@@ -39,7 +38,7 @@
     overflow: hidden;
   }
   .show-nav {
-    height: 700px;
+    height: 900px;
     transition-delay: all 2s ease;
     background: white;
   }
@@ -79,7 +78,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
+    }
+    li:nth-child(1){
+      padding-top: 8rem;
     }
     .container-links{
       display: flex;
@@ -89,7 +91,6 @@
     .linksvacio{
       height: 50px;
     }
-
   }
   /*medida alta*/
   @media screen and (min-width: 991px) {

@@ -5,11 +5,21 @@ import styles from "../../css/tenplate.module.css"
 
 const Example = ({Projectimages}) => (
     <Carousel
-        infinite
-        showArrows
-        showIndicator
         slidesToShow={1}
         centerPadding={30}
+        breakpoints={[
+            {
+                size: 200,
+                settings: {
+                    slidesToShow: 1,
+                    showArrows: true,
+                    showIndicator: true,
+                    swipeable: true,
+                    infinite: true,
+                },
+            }
+        ]}
+        
     >
      {
          Projectimages.map((item, index) => (

@@ -1,5 +1,6 @@
 .section-principal{
  margin:2rem ;
+ min-height: 80vh;
 }
 .card{
     display: grid;
@@ -26,7 +27,7 @@
     box-shadow: rgba(0, 0, 0, 0.3) 10px 10px 60px 0px ;
 }
 .container:hover{
-    transform: scale(1.1);
+    transform: scale(1);
     
 }
 /*efecto*/
@@ -84,8 +85,9 @@ width: 100px !important;
     height:180px;
     width: 100%;
     margin-top: -5px;
-    transform: scale(1);
     border-radius: 20px;
+    transition: var(--mainTransition);
+
 }
 .container-icon:hover .name-skill{
     opacity: 0.7;
