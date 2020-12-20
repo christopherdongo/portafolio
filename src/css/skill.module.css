@@ -45,9 +45,9 @@
     transition: var(--mainTransition);
   }
 .container-icon svg{
-      height: 120px !important;
-      width: 120px;
-      border-radius: 80%;
+      width: 120px !important;
+      height: auto;
+      border-radius: 50%;
 }
 .container-icon svg path{
 height: 100px !important;
