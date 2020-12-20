@@ -6,7 +6,7 @@ import { VscGithubInverted } from "react-icons/vsc"
 import { BiLinkAlt } from "react-icons/bi"
 import Technology from "../components/technology/technology"
 import Img from 'gatsby-image'
-
+import Seo from '../components/SEO'
 const Template = ({ data }) => {
   //destructuring
   const { projects } = data
@@ -27,6 +27,7 @@ const Template = ({ data }) => {
 
   return (
     <Layout>
+      <Seo title={title} description="this is description" />
       <main className={styles.templateprojects}>
       <h1 className={styles.texto}>{title}</h1>
        {/* <Carousel>

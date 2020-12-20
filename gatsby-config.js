@@ -8,10 +8,11 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: "Portafolio",
-    description:"Portafolio de proyectos",
+    description:"Portafolio de mis proyectos Personales",
     author: "Christopher Dongo",
     data: {name:"christopher", year:28},
     twitterUsername:"@tdhris",
+    facebookUsername: "Christopher Dongo H.",
     image:'/defaultBcg.jpeg',
     siteUrl:'https://www.google.com.pe'
   },
@@ -31,6 +32,14 @@ module.exports = {
         // Learn about environment variables: https://gatsby.dev/env-vars
         accessToken:`4BuRXmFWAlaUFCYCApcd4upDJjLkZUshPIUv35cLj0E`
       }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.example.com',
+        sitemap: 'https://www.example.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
