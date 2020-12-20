@@ -25,17 +25,17 @@ export default [
   {
     name: "Css",
     icon: <Css3 />,
-    text:"me permite dar estilo diseño, color, da vida mis webs"
+    text:"me permite brindar color vida a mis proyectos"
   },
   {
     name: "Html5",
     icon: <Html5 />,
-    text:"se utiliza para estructurar una pagina web"
+    text:"sin duda es el esqueleto de una pagina web el, permite maquetar un sitio web"
   },
   {
     name: "Pug",
     icon: <Pug />,
-    text:"Me permite escribir HTML de una manera mas sencilla"
+    text:"Me permite escribir HTML de manera rapida y no estar preocupado por cerrar las etiquetas"
   },
   {
     name: "ReactJS",
@@ -50,21 +50,22 @@ export default [
   {
     name: "MongoDB",
     icon: <Mongodb />,
-    text:"La base de datos NOSQL basado en documentos"
+    text:"La base de datos NOSQL basado en documentos es muy util y para realizar las consultas se utiliza javascript"
   },
   {
     name: "NodeJS",
     icon: <Nodejs />,
-    text:"Permite utilizar javascript del lado del servidor, es muy eficiente las API"
+    text:"Permite utilizar javascript del lado del servidor, es muy eficiente en las API"
   },
   {
     name: "Bootstrap4",
     icon: <Bootstrap />,
-    text:"Framework de CSS que ayudar en el desarrollo web, especialmente para los sitios responsive "
+    text:"Framework de CSS que ayuda y brinda facilidad en el desarrollo web"
   },
   {
     name: "Styled Components",
     icon: <StyledComponents />,
+    text:"liberia basado en javascript permite crear componentes y dar estilo al mismo tiempos y entre otros beneficios"
   },
   {
     name: "Sass",
@@ -79,15 +80,15 @@ export default [
   {
     name: "Github",
     icon: <Github />,
-    text:"permite a los desarrollos llevar un control de versiones de nuestros desarrollos de manera eficiente"
+    text:"permite llevar un control de versiones de nuestros desarrollos de manera eficiente"
   },
   {
     name: "Linux",
     icon: <Linux />,
-    text:"Mi sistema operativo preferido he aprendido mucho de el y sigo en el aprendizaje constante"
+    text:"Mi sistema operativo preferido me considero un linuxero!!, he aprendido mucho de el y sigo en el aprendizaje constante"
   },{
     name:"Bash",
     icon:<Bash />,
-    text:"es lo bueno de linux permite automatizar tareas mediante los archivos Bash"
+    text:"Es lo bueno de linux permite automatizar tareas, y para estos casos se utiliza Bash"
   }
 ]

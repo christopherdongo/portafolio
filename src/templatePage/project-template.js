@@ -2,12 +2,10 @@ import React from "react"
 import Layout from "../components/Layout/layout"
 import { graphql } from "gatsby"
 import styles from "../css/tenplate.module.css"
-//import Carousel from "../components/carousel/carousel"
-//import Slide from "../components/carousel/slide"
 import { VscGithubInverted } from "react-icons/vsc"
 import { BiLinkAlt } from "react-icons/bi"
 import Technology from "../components/technology/technology"
-import Example from '../components/carousel/newcarousel'
+import Img from 'gatsby-image'
 
 const Template = ({ data }) => {
   //destructuring
@@ -31,12 +29,17 @@ const Template = ({ data }) => {
     <Layout>
       <main className={styles.templateprojects}>
       <h1 className={styles.texto}>{title}</h1>
-      {/*  <Carousel>
+       {/* <Carousel>
           {Projectimages.map((item, index) => (
             <Slide key={index} fluid={item.fluid} title={title} />
           ))}
-          </Carousel>*/}
-           <Example Projectimages={Projectimages} title={title}/>
+          </Carousel> */}
+          <div className={styles.imgContainer}>
+          {Projectimages.map((item, index) => (
+            <Img key={index} fluid={item.fluid} title={title} className={styles.images} />
+          ))}
+          </div>
+           
         <section className={styles.article}>
           <div className={styles.descriptionProjects}>
             <h2>Descripcion</h2>

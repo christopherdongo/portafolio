@@ -1,7 +1,10 @@
 .project{
-    padding-top: 1rem;
+    padding-top: 2.5rem;
     margin: 0 1rem;
     min-height: 100vh;
+}
+.project h1{
+  text-align: center;
 }
 .card-center{
     display: grid;
@@ -25,11 +28,30 @@
     transition: var(--mainTransition);
     display: block;
     width: 100%;
-    height: 100%;
     object-fit: cover;
   }
   .imagen-container:hover .imagen{
       opacity: 0.7;
+  }
+  .container-title{
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: var(--mainSpacing);
+    padding: 0.4rem ;
+    text-align: center;
+    display: inline-block;
+    background: #e1e3f0;
+  }
+  .title-projects {
+    position: relative;
+  }
+  .title-projects{
+    font-size: 1.2rem;
+    transition: var(--mainTransition);
   }
 /*enlace para los detalles*/
 .link{
@@ -45,17 +67,22 @@
     padding: 0.9rem ;
     display: inline-block;
     transition: var(--mainTransition);
+    transition-delay: all 2s ease;
     cursor: pointer;
     border-radius: 25px;
+    color: black;
 }
 .link:hover {
     background: var(--mainWhite);
     color: var(--primaryColor);
   }
-  .imagen-container:hover .link {
+  .imagen-container:hover .link{
     opacity: 1;
   }
-
+  .imagen-container:hover .container-title{
+    opacity: 0.7;
+    transition: all 2s ease;
+  }
 .footer-card{
     width: 100%;
     height: 80px;
@@ -79,16 +106,6 @@ width: 100%;
     color: black;
     font-size: 1rem;
 }
-
-
-/*media query*/
-/*@media screen and (min-width: 768px) and (max-width:992px){
-    .card-center{
-       grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-       row-gap: 2rem;
-    }
-}*/
-
 @media screen and (min-width: 992px){
     .card-center{
         grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));

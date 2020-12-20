@@ -8,15 +8,12 @@ const SContainer = styled.div`
   grid-template-columns:1fr;
   grid-row: 1fr;
   @media screen and (min-width: 768px) {
-    grid-template-columns:40% 1fr;
+    grid-template-columns:0% 1fr;
     margin: 2rem;
   }
 `
 const ContainerImg = styled.div`
-height:100%;
-width: 100%;
-object-fit:cover;
-
+  width:100%;
 `
 const StextWrapper = styled.div`
   display: flex;
@@ -25,12 +22,12 @@ const StextWrapper = styled.div`
   align-items: center;
   margin-bottom: 1rem;
   cursor: pointer;
+  height:0px;
   min-width:100%;
- 
   h1{
     font-size: 3rem;
+    color:white;
     text-align:center;
-    color: var(--clr-primary-1)
   }
   @media screen and (min-width: 768px) {
   }

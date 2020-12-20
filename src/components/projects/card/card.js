@@ -5,7 +5,7 @@ import Proptypes from "prop-types"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const Card = ({ project }) => {
-  const { image,slug} = project
+  const { image, slug, title } = project
 
   return (
     <article className={styles.card}>
@@ -14,6 +14,9 @@ const Card = ({ project }) => {
         <AniLink fade className={styles.link} to={`/proyectos/${slug}`}>
           Detalles
         </AniLink>
+        <div className={styles.containerTitle}>
+          <h1 className={styles.titleProjects}>{title}</h1>
+        </div>
       </div>
     </article>
   )
