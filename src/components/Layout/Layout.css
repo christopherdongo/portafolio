@@ -17,8 +17,7 @@
     --error:hsl(0,93%,68%);
 }
 /*globales*/
-*,
-*::after, *::before{
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
