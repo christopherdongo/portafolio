@@ -8,18 +8,14 @@ const Technology = ({ Tecnologies }) => {
     for (let j = 0; j <= Tecnologies.length; j++) {
       result.push(Tech.filter(node => node.name === Tecnologies[j]))
     }
-    return result
+    return result.filter(node => node.length !== 0)
   }
-  const arry = tech()
-  const result = arry.filter(node => node.length !== 0)
-  //console.log( result.map( node =>node[0].icon))
-
-  //const result = Skill.filter(skill => skill.name === function(){for(let i=0; i<Tecnologies.length; i++){return Tecnologies[i] }})
-  //console.log(result)
-
+  //recibe el array
+ const arry = tech();
+ 
   return (
     <>
-      {result.map((node, index) => (
+      {arry.map((node, index) => (
         <article key={index} className={styles.container} >
           <picture className={styles.technologyIcon}>
             {node[0].icon}

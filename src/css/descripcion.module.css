@@ -48,7 +48,6 @@
     font-size: 1rem;
     font-weight: bold;
 }
-
 @media screen and (min-width: 768px) {
   .firs-rows {
     display: grid;

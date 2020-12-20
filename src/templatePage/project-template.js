@@ -105,8 +105,8 @@ export const query = graphql`
         description
       }
       views {
-        fluid {
-          ...GatsbyContentfulFluid_tracedSVG
+        fluid{
+          ...GatsbyContentfulFluid_withWebp
         }
       }
     }
