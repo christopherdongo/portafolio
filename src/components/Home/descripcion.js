@@ -8,7 +8,7 @@ query{
   defaultphoto:file(relativePath:{eq:"christopher_dongo.jpg"}){
     childImageSharp{
       fixed(width:220 height:250){
-        ...GatsbyImageSharpFixed
+        ...GatsbyImageSharpFixed_tracedSVG
       }
     }
   }

@@ -12,7 +12,7 @@ query{
     logo:file(relativePath:{eq:"logo1.png"}){
       childImageSharp{
         fixed(width:150 height:40){
-            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_tracedSVG
         }
       }
     }

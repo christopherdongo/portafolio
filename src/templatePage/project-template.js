@@ -100,8 +100,8 @@ export const query = graphql`
         description
       }
       views {
-        fluid{
-          ...GatsbyContentfulFluid_withWebp
+        fluid(maxWidth:1240){
+          ...GatsbyContentfulFluid_tracedSVG
         }
       }
     }

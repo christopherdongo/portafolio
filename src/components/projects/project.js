@@ -12,9 +12,9 @@ const getData = graphql`
           title
           slug
           image{
-            fluid{
-              ...GatsbyContentfulFluid_withWebp
-          }
+            fluid(maxWidth:1240){
+              ...GatsbyContentfulFluid_tracedSVG
+            }
         }
       }
       }
