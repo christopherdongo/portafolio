@@ -20,6 +20,9 @@ const Technology = ({ Tecnologies }) => {
           <picture className={styles.technologyIcon}>
             {node[0].icon}
           </picture>
+          <div className={styles.cloud}>
+            <h1>{node[0].name}</h1>
+          </div>
         </article>
       ))}
     </>

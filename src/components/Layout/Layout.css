@@ -36,13 +36,12 @@ html {
 
 body{
     font-family: "Lato", sans-serif;
-    color: var(--mainBlack);
-    background: var(--gradien1);
     line-height: 1.4;
     font-size: 1rem;  
     min-height: 100%;
     position: relative;
     overflow:auto ;
+    background: var(darkGrey);
 }
 .container-principal{
     display: flex;

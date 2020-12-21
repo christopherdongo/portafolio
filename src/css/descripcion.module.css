@@ -1,5 +1,4 @@
 .container {
-  background-image: white;
   margin:3rem;
   display: grid;
   grid-template-columns: 1fr ;

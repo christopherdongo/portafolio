@@ -20,6 +20,7 @@
     gap: 0.6rem;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.3) 10px 10px 60px 0px ;
+    transition: var(--mainTransition);
 }
    /*efecto*/
    .container-icon{
@@ -42,12 +43,14 @@
     flex-direction: column;
     opacity: 0;
     border-radius: 20px;
+    transition: var(--mainTransition);
 }
 .container-icon:hover{
     transition: var(--mainTransition);
   }
   .container-icon:hover svg{
-    opacity: 0.2;
+    opacity: 0;
+    transition: all .3s ease-in;
 }
 .name-skill:hover{
     color: var(--mainWhite);
@@ -56,7 +59,7 @@
     height:180px;
     width: 100%;
     border-radius: 20px;
-    transition: var(--mainTransition);
+    transition: all .4s ease-in;
 }
 .container-icon:hover .name-skill{
     opacity: 0.7;
