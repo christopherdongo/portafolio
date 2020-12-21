@@ -1,17 +1,28 @@
 import React from "react"
 import styles from "../../css/contact.module.css"
+import  {FaWhatsapp}  from "react-icons/fa"
 import { Formik, Form, Field, ErrorMessage } from "formik"
 const Contact = () => {
-
- /*funcion para codificar los datos que se enviara a netlify*/ 
+  /*funcion para codificar los datos que se enviara a netlify*/
   const encode = data => {
     return Object.keys(data)
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
       .join("&")
   }
-
   return (
     <main className={styles.containerContact}>
+      <section className={styles.containerWsp}>
+        <h1>Comunícate conmingo</h1>
+        <a
+          href="https://api.whatsapp.com/send?phone=+51919060263"
+          target="_blank"
+          rel="noreferrer"
+          className={styles.iconWsp}
+        >
+          <FaWhatsapp />
+          Escribeme
+        </a>
+      </section>
       <Formik
         initialValues={{
           name: "",
@@ -19,7 +30,7 @@ const Contact = () => {
           message: "",
         }}
         onSubmit={(values, actions) => {
-          /*enviar los datos a netlify*/ 
+          /*enviar los datos a netlify*/
           fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -52,7 +63,7 @@ const Contact = () => {
         <Form
           className={styles.form}
           method="POST"
-          name="contact" 
+          name="contact"
           data-netlify={true}
         >
           <h1>Contactame</h1>
@@ -63,8 +74,9 @@ const Contact = () => {
             </label>
             <Field type="text" name="name" className={styles.input} />
             <span className={styles.error}>
-           <ErrorMessage name="name" />
-           </span>
+              <ErrorMessage name="name" />
+              
+            </span>
           </div>
 
           <div>
@@ -72,9 +84,9 @@ const Contact = () => {
               Correo<span className={styles.span}>*</span>:{" "}
             </label>
             <Field type="email" name="email" className={styles.input} />
-           <span className={styles.error}>
-           <ErrorMessage name="email" />
-           </span>
+            <span className={styles.error}>
+              <ErrorMessage name="email" />
+            </span>
           </div>
 
           <div>
@@ -89,9 +101,9 @@ const Contact = () => {
               component="textarea"
               className={styles.message}
             />
-                       <span className={styles.error}>
-           <ErrorMessage name="message" />
-           </span>
+            <span className={styles.error}>
+              <ErrorMessage name="message" />
+            </span>
           </div>
 
           <button className={styles.send} type="submit">

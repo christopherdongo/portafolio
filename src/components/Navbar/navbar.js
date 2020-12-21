@@ -24,7 +24,6 @@ const Nabvar=()=>{
     const isOpenToggle=()=>{
         setOpenTogle( opentogle => !opentogle)
     }
-
     //logo
     const logo = useStaticQuery(getLogo)
     const {fixed} =  logo.logo.childImageSharp;
