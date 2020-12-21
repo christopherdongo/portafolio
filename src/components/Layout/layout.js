@@ -6,12 +6,11 @@ import './Layout.css'
 const Layout =({children})=>{
 
   return(
-    <main>
+    <main className="container-principal">
       <Navbar />
       {children}
       <Footer />
     </main>
   )
 }
-
 export default Layout

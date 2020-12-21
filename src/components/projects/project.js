@@ -14,9 +14,9 @@ const getData = graphql`
           image{
             fluid{
               ...GatsbyContentfulFluid_withWebp
-            }
           }
         }
+      }
       }
     }
   }

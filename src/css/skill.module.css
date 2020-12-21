@@ -1,6 +1,5 @@
 .section-principal{
     margin:2rem ;
-    min-height: 80vh;
    }
    .card{
        display: grid;

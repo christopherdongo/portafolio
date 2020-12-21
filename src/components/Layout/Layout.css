@@ -30,8 +30,8 @@ a{
   text-decoration: none;
 }
 html {
-  min-height: 100%;
     position: relative;
+    height: 100vh;
 }
 
 body{
@@ -39,14 +39,43 @@ body{
     color: var(--mainBlack);
     background: var(--gradien1);
     line-height: 1.4;
-    font-size: 1rem;
-    padding-top: 60px;
-    
+    font-size: 1rem;  
+    min-height: 100%;
+    position: relative;
+    overflow:auto ;
 }
-main{
-    min-height: 100vh;
+.container-principal{
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    margin-top: 3.5rem;
   }
 
+
+/*scroll*/
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+
+body::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+body::-webkit-scrollbar:vertical {
+  width:10px;
+}
+body::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+  display: none;
+} 
+body::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #797979;
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+}
+body::-webkit-scrollbar-track {
+  border-radius: 10px;  
+}
+/*Estilos estándar experimentales (Principalmente Firefox)*/
+body{
+scrollbar-color: rgba(0, 0, 0, .5) rgba(0, 0, 0, 0);
+scrollbar-width: thin;
+}

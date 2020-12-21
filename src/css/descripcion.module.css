@@ -3,8 +3,7 @@
   margin:3rem;
   display: grid;
   grid-template-columns: 1fr ;
-  gap: 1rem;
-  min-height: 80vh;
+  gap: 2rem;
 }
 .firs-rows {
   display: flex;
@@ -24,30 +23,38 @@
   letter-spacing: 0.2rem;
    transform:  matrix(1, 0, 0, 1, 0, 0);
    font-size: 2.3rem;
+   font-weight: 800;
 }
 .name p{
-    font-weight: 700;
-    letter-spacing: 0.2rem;
+    font-weight: 900;
+    letter-spacing: 0.1rem;
     font-size: 1.5rem;
     text-align: justify
 }
+.container-imagen{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .avatar {
-  display: block;
   margin: auto;
   border-radius: 50%;
-  max-width:60%;
+  /*max-width:60%;*/
+  object-fit: cover;
+  width: 100%;
   border: 10px solid white;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0px 4px;
-  object-fit: cover;
 }
 .description{
     margin-top:2rem;
 }
 .description p{
     text-align: justify;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
+    font-weight: 300;
 }
+
 @media screen and (min-width: 768px) {
   .firs-rows {
     display: grid;
@@ -75,5 +82,15 @@
   .description p{
     grid-column:2/6;
   }
+}
 
+@media screen and (min-width:1440px){
+  .container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 250px;
+  } 
+
+  .description p{
+    font-size: 1.5rem;
+}
 }

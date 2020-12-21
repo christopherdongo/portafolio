@@ -3,14 +3,14 @@
     top: 0;
     width: 100%;
     z-index: 1000;
-    height: 75px;
+    height: 60px;
     background-color: rgba(rgb(245, 246, 250));
     background:white;
     box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
 }
 .nav-header {
     display: flex;
-    height: 75px;
+    height: 60px;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1rem;
@@ -27,8 +27,8 @@
     font-size: 1.5rem;
   }
   .logo{
-    width: 8rem;
-    height: 5rem;
+    width: 10rem;
+    height: 3.5rem;
     cursor: pointer;
   }
   .nav-links {
@@ -83,6 +83,9 @@
     }
     .linksvacio{
       height: 50px;
+    }
+    .show-nav{
+      height: 700px;
     }
   }
   /*medida alta*/

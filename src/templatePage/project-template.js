@@ -95,7 +95,6 @@ export const query = graphql`
         Gatsby
         GQL
         Contentfull
-        StyledComponents
       }
       description {
         description

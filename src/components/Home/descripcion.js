@@ -1,15 +1,33 @@
 import React from "react"
 import styles from "../../css/descripcion.module.css"
-import logo from "../../images/christopher_dongo.jpg"
+import Img from 'gatsby-image'
+import {graphql, useStaticQuery} from 'gatsby'
 
-
+const getImagen = graphql`
+query{
+  defaultphoto:file(relativePath:{eq:"christopher_dongo.jpg"}){
+    childImageSharp{
+      fixed(width:220 height:250){
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+  }
+  
+`
 const Descripcion = () => {
+
+  const data = useStaticQuery(getImagen);
+
+  const {fixed} = data.defaultphoto.childImageSharp;
+  console.log(fixed)
+
   
   return (
     <main className={styles.container}>
       <div className={styles.firsRows}>
         <div className={styles.containerImagen}>
-          <img src={logo} alt="img" className={styles.avatar} />
+         <Img fixed={fixed} alt="imagen de photo" className={styles.avatar} />
         </div>
         <div className={styles.name}>
           <h1>Christopher Dongo Huarancca</h1>
@@ -18,7 +36,7 @@ const Descripcion = () => {
       </div>
       <div className={styles.description}>
         <p>
-          ¡Hola!, me llamo Christopher Dongo, soy bachiller en ingeneria de
+          ¡Hola!, me llamo Christopher, soy bachiller en ingeneria de
           sistemas e informatica, soy peruano, tengo 28 años y me apasiona el
           desarrollo web. Me gusta aprender de forma autodidacta y untarme un
           poco de todo, me gusta mas el Frontend, Mi lenguaje preferido es JavaScript y sus diversos frameworks
