@@ -7,22 +7,19 @@ const getImagen = graphql`
 query{
   defaultphoto:file(relativePath:{eq:"christopher_dongo.jpg"}){
     childImageSharp{
-      fixed(width:220 height:250){
+      fixed(width:240 height:300){
         ...GatsbyImageSharpFixed_tracedSVG
       }
     }
   }
   }
-  
 `
 const Descripcion = () => {
 
   const data = useStaticQuery(getImagen);
-
   const {fixed} = data.defaultphoto.childImageSharp;
   console.log(fixed)
 
-  
   return (
     <main className={styles.container}>
       <div className={styles.firsRows}>

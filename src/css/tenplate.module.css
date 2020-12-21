@@ -92,6 +92,7 @@
   margin-bottom: 3rem;
 }
 .container{
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,6 +122,44 @@ border-radius: 50%;
   letter-spacing: 1px;
   text-align: center;
   padding-bottom: 1rem;
+}
+.cloud{
+  position: absolute;
+  color: var(--mainBlack);
+  background-color: red;
+  display: none;
+  width: 60%;
+  height: 40px;
+  transform: translateY(220%);
+  border-radius: 20px;
+}
+.cloud h1{
+  text-align: center;
+}
+.cloud::before{
+  content: ' ';
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -17px;
+  margin-top: -2px;
+  border: 17px solid transparent;
+  border-top-width: 0;
+  border-bottom-color:var(--darkGrey);
+  transition: all .5 ease;
+}
+
+.container:hover .cloud{
+  display: block;
+  background-color: var(--mainWhite);
+  box-shadow: var(--lightShadow);
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  
 }
 /*media query*/
 @media screen and (min-width: 768px) {
