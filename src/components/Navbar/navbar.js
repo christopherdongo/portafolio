@@ -1,23 +1,41 @@
 import React, {useState} from 'react';
-import styles from '../../css/navbar.module.css'
-import logo1 from '../../images/logo1.png'
-import {FaAlignRight} from 'react-icons/fa'
-import links from '../constants/links'
-import socialicons from '../constants/socialicons'
+import styles from '../../css/navbar.module.css';
+import {FaAlignRight} from 'react-icons/fa';
+import links from '../constants/links';
+import socialicons from '../constants/socialicons';
 import AniLink from "gatsby-plugin-transition-link/AniLink";
-const Nabvar=()=>{
+import {graphql, useStaticQuery} from 'gatsby';
+import Img from 'gatsby-image';
 
+const getLogo = graphql`
+query{
+    logo:file(relativePath:{eq:"logo1.png"}){
+      childImageSharp{
+        fixed(width:150 height:40){
+            ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    }
+`
+const Nabvar=()=>{
     const [opentogle, setOpenTogle] = useState(false)
     //funcion toggle
     const isOpenToggle=()=>{
         setOpenTogle( opentogle => !opentogle)
     }
+
+    //logo
+    const logo = useStaticQuery(getLogo)
+    const {fixed} =  logo.logo.childImageSharp;
+
     return(
         <nav className={styles.navbar}>
          <div className={styles.navCenter}>
              <div className={styles.navHeader}>
                  <AniLink to="/" fade >
-                 <img src={logo1} alt="logo" className={styles.logo}/>
+                {/*<img src={logo1} alt="logo" className={styles.logo}/> */}
+                <Img fixed={fixed}  className={styles.logo}/>
                  </AniLink>
                  <button type="button" className={styles.logoBtn} onClick={isOpenToggle} aria-label="boton que permite el menu deslisable">
                      <FaAlignRight className={styles.logoIcon} />
