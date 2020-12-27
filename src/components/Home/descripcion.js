@@ -18,8 +18,6 @@ const Descripcion = () => {
 
   const data = useStaticQuery(getImagen);
   const {fixed} = data.defaultphoto.childImageSharp;
-  console.log(fixed)
-
   return (
     <main className={styles.container}>
       <div className={styles.firsRows}>

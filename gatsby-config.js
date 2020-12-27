@@ -4,7 +4,6 @@ require("dotenv").config({
   path:`.env.${process.env.NODE_ENV}`
 })
 
-
 module.exports = {
   siteMetadata: {
     title: "Portafolio",
@@ -12,9 +11,9 @@ module.exports = {
     author: "Christopher Dongo",
     data: {name:"christopher", year:28},
     twitterUsername:"@tdhris",
-    facebookUsername: "Christopher Dongo H.",
-    image:'/defaultBcg.jpeg',
-    siteUrl:'https://www.google.com.pe'
+    facebookUsername: "Christopher Dongo H",
+    image:'images/defaultBcg.jpeg',
+    siteUrl:'https://portafoliocd.netlify.app/'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

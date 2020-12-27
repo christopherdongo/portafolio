@@ -25,10 +25,10 @@
    font-weight: 800;
 }
 .name p{
+  text-align: center;
     font-weight: 900;
     letter-spacing: 0.1rem;
     font-size: 1.5rem;
-    text-align: justify
 }
 .container-imagen{
   width: 100%;
@@ -45,7 +45,7 @@
   box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0px 4px;
 }
 .description{
-    margin-top:2rem;
+    margin:0.5rem;
 }
 .description p{
     text-align: justify;

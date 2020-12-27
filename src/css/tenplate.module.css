@@ -47,8 +47,22 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  
+}
+.container-github{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container-link{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .repository {
+  position: relative;
   cursor: pointer;
   font-size: 4rem;
   display: flex;
@@ -73,7 +87,7 @@
 .repository svg:hover{
   color: white;
 }
-.link {
+.link{
   cursor: pointer;
   font-size: 4rem;
   display: flex;
@@ -93,6 +107,38 @@
 }
 .link svg:hover{
   color: white;
+}
+.cloud-github{
+  position: absolute;
+  color: var(--clr-primary-1);
+  font-size: 0.9rem;
+  border-radius: 10px;
+  padding: 0.7rem;
+  transform: translateY(140%);
+  background-color: var(--mainWhite);
+  box-shadow: var(--darkShadow);
+  z-index: 1000;
+  display: none;
+  transition: var(--mainTransition);
+}
+.cloud-link{
+  position: absolute;
+  color: var(--clr-primary-1);
+  font-size: 0.9rem;
+  border-radius: 10px;
+  padding: 0.7rem;
+  background-color: var(--mainWhite);
+  box-shadow: var(--darkShadow);
+  transform: translateY(140%);
+  z-index: 1000;
+  display: none;
+  transition: all .5s ease-in-out
+}
+.container-github:hover .cloud-github{
+  display:block;
+}
+.container-link:hover .cloud-link{
+  display: block;
 }
 /*css del template*/
 .container-technology{
@@ -129,7 +175,7 @@ border-radius: 50%;
   border-radius: 70%;
 }
 .texto{
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   letter-spacing: 1px;
   text-align: center;
   padding-bottom: 1rem;
@@ -170,7 +216,6 @@ border-radius: 50%;
   align-items: center;
   align-content: center;
   justify-content: center;
-  
 }
 /*media query*/
 @media screen and (min-width: 768px) {
@@ -194,3 +239,9 @@ border-radius: 50%;
 @media screen and (min-width: 992px){
 }
 
+@media screen and (min-width:320px) and (max-width:400px){
+  .contain-button{
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+}

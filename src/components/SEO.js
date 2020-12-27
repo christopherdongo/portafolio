@@ -20,6 +20,7 @@ query{
 const Seo =({title, description})=>{
   const {site} = useStaticQuery(getData);
   const { siteDesc, image, siteTitle,twitterUsername,siteUrl} = site.siteMetadata;
+  console.log(image)
     return(
         <Helmet htmlAttributes={{lang:"en"}} title={`${title} | ${siteTitle}`}> 
           <meta name="description" content={description || siteDesc}></meta>
@@ -35,7 +36,7 @@ const Seo =({title, description})=>{
            <meta property="og:image:height" content="300" />
 
            {/*twitter*/ }
-           <meta name="twitter:card" content="sumary_large_image" />
+           <meta name="twitter:card" content="summary_large_image" />
            <meta name="twitter:creator" content={twitterUsername}/>
            <meta name="twitter:title" content={siteTitle} />
            <meta name="twitter:description" content={description} />

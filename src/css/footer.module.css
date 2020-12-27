@@ -31,7 +31,7 @@
     color:var(--mainBlack);
     transform: translateY(-5px);
 }
-@media screen and (min-width:360px) and (max-width: 775px){
+@media screen and (min-width:320px) and (max-width: 775px){
     .footer-center{
         display: flex;
         flex-direction: column;

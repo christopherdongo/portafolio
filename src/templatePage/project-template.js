@@ -42,6 +42,7 @@ const Template = ({ data }) => {
             <p className={styles.texto}>{description}</p>
           </div>
           <div className={styles.containButton}>
+            <div className={styles.containerGithub}>
             <a
               className={styles.repository}
               href={repository}
@@ -50,6 +51,9 @@ const Template = ({ data }) => {
             >
               <VscGithubInverted />
             </a>
+            <p className={styles.cloudGithub}>Repositorio</p>
+            </div>
+            <div className={styles.containerLink}>
             <a
               className={styles.link}
               href={link}
@@ -58,6 +62,8 @@ const Template = ({ data }) => {
             >
               <BiLinkAlt />
             </a>
+            <p className={styles.cloudLink}>Visitar</p>
+            </div>
           </div>
           <div className={styles.technology}>
             <h2>tecnologias</h2>
