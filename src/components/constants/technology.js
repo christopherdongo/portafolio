@@ -96,7 +96,7 @@ export default [
   {
     name:"StyledComponents",
     icon:<StyledComponents />,
-    text:"Styled Components"
+    text:"Styled Components",
   }
 
 ]

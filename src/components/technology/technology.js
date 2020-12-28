@@ -1,18 +1,20 @@
 import React from "react"
-import Tech from "../constants/technology"
+import Skill from "../constants/skill"
 import styles from "../../css/tenplate.module.css"
 const Technology = ({ Tecnologies }) => {
 
   const tech = () => {
     let result = []
-    for (let j = 0; j <= Tecnologies.length; j++) {
-      result.push(Tech.filter(node => node.name === Tecnologies[j]))
-    }
+    Tecnologies.map( (tech)=>{ 
+      return(
+        result.push(Skill.filter(node => node.name === tech))
+      )
+    })
     return result.filter(node => node.length !== 0)
   }
   //recibe el array
  const arry = tech();
- 
+
   return (
     <>
       {arry.map((node, index) => (
@@ -21,7 +23,7 @@ const Technology = ({ Tecnologies }) => {
             {node[0].icon}
           </picture>
           <div className={styles.cloud}>
-            <h1>{node[0].text}</h1>
+            <h1>{node[0].tech}</h1>
           </div>
         </article>
       ))}
