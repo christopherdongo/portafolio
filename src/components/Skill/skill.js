@@ -1,7 +1,8 @@
 import React from 'react';
-import styles from '../../css/skill.module.css'
-import skill from '../constants/skill'
-import tech from '../constants/tech'
+import styles from '../../css/skill.module.css';
+import skill from '../constants/skill';
+import tech from '../constants/tech';
+import CardSkill from './cardskill'
 const Skill=()=>{
 
     const SkillMap=()=>{
@@ -21,15 +22,7 @@ const Skill=()=>{
          <div className={styles.card}>
               { arr.map( (skill, index)=>{
                   return(
-                      <article key={index} className={styles.container}>
-                         <div className={styles.containerIcon}>
-                          {skill[0].icon}
-                          <div className={styles.nameSkill}>
-                            <h1>{skill[0].name}</h1>
-                            <p>{skill[0].text}</p>
-                         </div>
-                         </div>
-                      </article>
+                   <CardSkill key={index} skill={skill} />
                   )
               })}
          </div>
