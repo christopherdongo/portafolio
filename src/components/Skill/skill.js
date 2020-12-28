@@ -26,7 +26,7 @@ const Skill=()=>{
                           {skill[0].icon}
                           <div className={styles.nameSkill}>
                             <h1>{skill[0].name}</h1>
-                            <p>{skill.text}</p>
+                            <p>{skill[0].text}</p>
                          </div>
                          </div>
                       </article>
