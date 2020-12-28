@@ -17,6 +17,5 @@ export default [
         "Github":"Github",
         "Linux":"Linux",
         "Bash":"Bash"
-
     }
 ]
