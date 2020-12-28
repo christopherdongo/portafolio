@@ -1,21 +1,18 @@
-import React, {useEffect, memo} from "react"
+import React, {memo} from "react"
 import styles from '../../css/skill.module.css'
 const CardSkill = memo(({skill}) => {
 
     const {icon, name, text} = skill[0];
 
-    useEffect( ()=>{
-       console.log('card')
-    },[])
   return (
     <>
       <article className={styles.container}>
         <div className={styles.containerIcon}>
           {icon}
-          <div className={styles.nameSkill}>
+         <div className={styles.nameSkill}>
             <h1>{name}</h1>
-            <p>{text}</p>
-          </div>
+            <p>{text}</p> 
+           </div> 
         </div>
       </article>
     </>

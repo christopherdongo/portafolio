@@ -33,7 +33,6 @@ const Nabvar=()=>{
          <div className={styles.navCenter}>
              <div className={styles.navHeader}>
                  <AniLink to="/" fade >
-                {/*<img src={logo1} alt="logo" className={styles.logo}/> */}
                 <Img fixed={fixed}  className={styles.logo}/>
                  </AniLink>
                  <button type="button" className={styles.logoBtn} onClick={isOpenToggle} aria-label="boton que permite el menu deslisable">

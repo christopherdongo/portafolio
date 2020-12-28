@@ -1,24 +1,25 @@
 import React from "react"
 
-import Bootstrap from "../../skillsvg/bootstrap";
-import Css3 from "../../skillsvg/css3";
-import Html5 from "../../skillsvg/html5";
-import Javascript from "../../skillsvg/javascript";
-import Mongodb from "../../skillsvg/mongodb";
-import Nodejs from "../../skillsvg/nodejs";
-import ReactSVG from "../../skillsvg/react";
-import Sass from "../../skillsvg/sass";
-import Pug from "../../skillsvg/pug";
-import Gatsby from "../../skillsvg/gatsby";
-import Gulp from "../../skillsvg/gulp";
-import ReactRouter from '../../skillsvg/reactrouter';
-import Tailwindcss from '../../skillsvg/tailwindcss';
-import GraphQL from '../../skillsvg/graphql';
-import Contentfull from '../../skillsvg/contentfull';
-import StyledComponents from '../../skillsvg/styledcomponents';
-import Github from '../../skillsvg/github';
-import Linux from '../../skillsvg/linux';
-import Bash from '../../skillsvg/bash'
+import Bootstrap from "../../assets/bootstrap.inline.svg";
+import Css3 from "../../assets/css.inline.svg";
+import Html5 from "../../assets/html.inline..svg";
+import Javascript from "../../assets/javascript.inline.svg";
+import Mongodb from "../../assets/mongodb.inline.svg";
+import Nodejs from "../../assets/nodejs.inline.svg";
+import ReactSVG from "../../assets/react.inline.svg";
+import Sass from "../../assets/sass.inline.svg";
+import Pug from "../../assets/pug.inline.svg";
+import Gatsby from "../../assets/gatsby.inline.svg";
+import Gulp from "../../assets/gulp.inline.svg";
+import ReactRouter from '../../assets/reactrouter.inline.svg';
+import Tailwindcss from '../../assets/tailwindcss.inline.svg';
+import GraphQL from '../../assets/graphql.inline.svg';
+import Contentfull from '../../assets/contentfull.inline.svg';
+import StyledComponents from '../../assets/styled.inline.svg';
+import Github from '../../assets/github.inline.svg';
+import Linux from '../../assets/linux.inline.svg';
+import Bash from '../../assets/bash.inline.svg'
+
 
 export default [
   {

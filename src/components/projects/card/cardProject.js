@@ -7,6 +7,12 @@ export default class CardProject extends Component{
     state={
         project:this.props.projects.edges
     }
+    componentDidMount(){
+        this.setState({
+            project:this.props.projects.edges,
+            
+        })
+    }
     render(){
         //destructuring
         const {project} = this.state
