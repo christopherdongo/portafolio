@@ -80,36 +80,36 @@ export default Template
 
 //query para traer la informacion
 export const query = graphql`
-  query($singleslug: String) {
-    projects: contentfulProjects(slug: { eq: $singleslug }) {
-      title
-      repository
-      link
-      slug
-      technology {
-        Css
-        Gulp
-        Html5
-        Sass
-        Javascript
-        ReactRouter
-        ReactJS
-        MongoDB
-        Bootstrap4
-        NodeJS
-        ExpressJS
-        Gatsby
-        GQL
-        Contentfull
-      }
-      description {
-        description
-      }
-      views {
-        fluid(maxWidth:1240){
-          ...GatsbyContentfulFluid_tracedSVG
-        }
+query($singleslug: String) {
+  projects: contentfulProjects(slug: { eq: $singleslug }) {
+    title
+    repository
+    link
+    slug
+    technology {
+      Css
+      Gulp
+      Html5
+      Sass
+      Javascript
+      ReactRouter
+      ReactJS
+      MongoDB
+      Bootstrap4
+      NodeJS
+      ExpressJS
+      Gatsby
+      GQL
+      Contentfull
+    }
+    description {
+      description
+    }
+    views {
+      fluid{
+        ...GatsbyContentfulFluid
       }
     }
   }
+}
 `
