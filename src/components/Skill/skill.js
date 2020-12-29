@@ -1,10 +1,15 @@
-import React, { lazy, Suspense } from "react"
-import styles from "../../css/skill.module.css"
-import skill from "../constants/skill"
-import tech from "../constants/tech"
+import React from "react";
+import loadable from '@loadable/component';
+import styles from "../../css/skill.module.css";
+import skill from "../constants/skill";
+import tech from "../constants/tech";
+//import CardSkill from './cardskill';
 
-const CardLazy = lazy(() => import("./cardskill"))
-const renderLoader = () => <p>Loading</p>
+
+const OtherComponent = loadable(() => import('./cardskill'),{
+    fallback: <div>Loading...</div>,
+  })
+  
 
 const Skill = () => {
   const SkillMap = () => {
@@ -22,9 +27,9 @@ const Skill = () => {
       <div className={styles.card}>
         {arr.map((skill, index) => {
           return (
-            <Suspense fallback={renderLoader()} key={index}>
-              <CardLazy key={index} skill={skill} />
-            </Suspense>
+            
+              <OtherComponent key={index} skill={skill} />
+            
           )
         })}
       </div>

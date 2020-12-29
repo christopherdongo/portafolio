@@ -1,15 +1,19 @@
-import React, {lazy, Suspense} from "react"
-import Layout from "../components/Layout/layout"
-import { graphql } from "gatsby"
-import styles from "../css/tenplate.module.css"
-import { VscGithubInverted } from "react-icons/vsc"
-import { BiLinkAlt } from "react-icons/bi"
-import Img from 'gatsby-image'
-import Seo from '../components/SEO'
+import React from "react";
+import loadable from '@loadable/component';
+import Layout from "../components/Layout/layout";
+import { graphql } from "gatsby";
+import styles from "../css/tenplate.module.css";
+import { VscGithubInverted } from "react-icons/vsc";
+import { BiLinkAlt } from "react-icons/bi";
+import Img from 'gatsby-image';
+import Seo from '../components/SEO';
+//import Technology from "../components/technology/technology"
 
 
-const TecnologyLazy = lazy( ()=> import("../components/technology/technology"))
-const renderLoader = () => <p>Loading</p>;
+const OtherComponent = loadable(() => import('../components/technology/technology'),{
+  fallback: <div>Loading...</div>,
+})
+
 
 const Template = ({ data }) => {
   //destructuring
@@ -72,9 +76,9 @@ const Template = ({ data }) => {
           <div className={styles.technology}>
             <h2>tecnologias</h2>
             <div className={styles.containerTechnology}>
-              <Suspense fallback={renderLoader()}>
-              <TecnologyLazy Tecnologies={Tecnologies} />
-              </Suspense>
+              
+              <OtherComponent Tecnologies={Tecnologies} />
+              
             </div>
           </div>
         </section>
