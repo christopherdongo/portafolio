@@ -1,6 +1,6 @@
-import React, {memo} from "react"
+import React from "react"
 import styles from '../../css/skill.module.css'
-const CardSkill = memo(({skill}) => {
+const CardSkill = ({skill}) => {
 
     const {icon, name, text} = skill[0];
 
@@ -17,6 +17,6 @@ const CardSkill = memo(({skill}) => {
       </article>
     </>
   )
-})
+}
 
 export default CardSkill

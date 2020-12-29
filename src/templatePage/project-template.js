@@ -1,12 +1,16 @@
-import React from "react"
+import React, {lazy, Suspense} from "react"
 import Layout from "../components/Layout/layout"
 import { graphql } from "gatsby"
 import styles from "../css/tenplate.module.css"
 import { VscGithubInverted } from "react-icons/vsc"
 import { BiLinkAlt } from "react-icons/bi"
-import Technology from "../components/technology/technology"
 import Img from 'gatsby-image'
 import Seo from '../components/SEO'
+
+
+const TecnologyLazy = lazy( ()=> import("../components/technology/technology"))
+const renderLoader = () => <p>Loading</p>;
+
 const Template = ({ data }) => {
   //destructuring
   const { projects } = data
@@ -68,7 +72,9 @@ const Template = ({ data }) => {
           <div className={styles.technology}>
             <h2>tecnologias</h2>
             <div className={styles.containerTechnology}>
-              <Technology Tecnologies={Tecnologies} />
+              <Suspense fallback={renderLoader()}>
+              <TecnologyLazy Tecnologies={Tecnologies} />
+              </Suspense>
             </div>
           </div>
         </section>
