@@ -51,13 +51,14 @@
   }
   .nav-links a {
     display: block;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
     text-decoration: none;
     text-transform: capitalize;
     color: var(--mainBlack);
     transition: var(--mainTransition);
     font-weight: bold;
-    letter-spacing: var(--mainSpacing);
-    font-size: 0.9em;
+    letter-spacing: 2px;
+    font-size: 1em;
   }
   .nav-links a:hover {
     color: var(--mainBlack);
@@ -70,7 +71,6 @@
       height: 550px;
     }
   }
-
   @media screen and (min-width: 320px) and (max-width:991px){
     .nav-links{
         font-size: 1.2rem;

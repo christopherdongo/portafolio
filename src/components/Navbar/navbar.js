@@ -35,7 +35,7 @@ const Nabvar=()=>{
                  <AniLink to="/" fade >
                 <Img fixed={fixed}  className={styles.logo}/>
                  </AniLink>
-                 <button type="button" className={styles.logoBtn} onClick={isOpenToggle} aria-label="boton que permite el menu deslisable">
+                 <button type="button" className={styles.logoBtn} onClick={isOpenToggle} aria-label="boton toggle">
                      <FaAlignRight className={styles.logoIcon} />
                  </button>
              </div>

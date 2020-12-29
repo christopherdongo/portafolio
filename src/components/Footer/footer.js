@@ -2,7 +2,6 @@ import React from 'react';
 import styles from '../../css/footer.module.css'
 import socialicons from '../constants/socialicons'
 const Footer =()=>{
-
     return(
         <footer className={styles.footer}>
             <div className={styles.footerCenter}>
@@ -15,10 +14,8 @@ const Footer =()=>{
                                 <a key={index} href={icons.url} target="_blank" rel="noreferrer">{icons.icon}</a>
                             )
                         })}
-                     
                 </div>
             </div>
-         
         </footer>
     )
 }

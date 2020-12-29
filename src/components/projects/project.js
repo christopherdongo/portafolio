@@ -21,7 +21,6 @@ const getData = graphql`
     }
   }
 `
-
 const Project=()=>{
     //recibiendo data content
     const {projects} = useStaticQuery(getData)

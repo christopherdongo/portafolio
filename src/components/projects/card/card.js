@@ -21,7 +21,6 @@ const Card = ({ project }) => {
     </article>
   )
 }
-
 export default Card
 
 //revisar los proptypes

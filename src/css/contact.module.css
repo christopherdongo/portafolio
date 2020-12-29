@@ -122,8 +122,6 @@ width: 100%;
     transition: 1s all ease ;
 }
 /*media querys*/
-@media screen and (min-width:425px) and (max-width:768px){
-}
 @media screen and (min-width: 768px){
     .container-contact{
         grid-template-rows: 1fr;
@@ -132,7 +130,6 @@ width: 100%;
         width: 70%;
     }
 }
-
 @media screen and (min-width:992px) {
     .container-contact{
         grid-template-columns:40% 60%;
@@ -142,7 +139,4 @@ width: 100%;
      .container-wsp h1{
          width: 100%;
      }
-} 
-
-@media screen and (min-width:1024px) {
 } 

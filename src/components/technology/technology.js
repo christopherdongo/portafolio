@@ -2,10 +2,9 @@ import React from "react"
 import Skill from "../constants/skill"
 import styles from "../../css/tenplate.module.css"
 const Technology = ({ Tecnologies }) => {
-
   const tech = () => {
     let result = []
-    Tecnologies.map( (tech)=>{ 
+        Tecnologies.map( (tech)=>{ 
       return(
         result.push(Skill.filter(node => node.name === tech))
       )

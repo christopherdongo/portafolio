@@ -16,6 +16,7 @@ query{
 `
 const Descripcion = () => {
 
+ 
   const data = useStaticQuery(getImagen);
   const {fixed} = data.defaultphoto.childImageSharp;
   return (
