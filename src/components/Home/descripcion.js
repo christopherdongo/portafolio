@@ -27,6 +27,7 @@ const Descripcion = () => {
         <div className={styles.name}>
           <h1>Christopher Dongo Huarancca</h1>
           <p>Frontend Developer</p>
+          
         </div>
       </div>
       <div className={styles.description}>

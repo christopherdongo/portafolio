@@ -4,6 +4,7 @@ require("dotenv").config({
   path:`.env.${process.env.NODE_ENV}`
 })
 
+
 module.exports = {
   siteMetadata: {
     title: "Portafolio",
@@ -59,15 +60,43 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /assets/, // See below to configure properly
+          include: /assets\/.*\.svg$/, // See below to configure properly
         },
       },
+    },
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        postCssPlugins: [require(`postcss-preset-env`)({ stage: 0 })],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mini-css-class-name`,
+      options: {
+        prefix: `x-`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-minify`,
+      options: {
+        debug: true, // debug optional, default false
+        config:{
+          collapseWhitespace: true,
+          minifyCSS: true,
+          minifyJS: true,
+          removeComments: true,
+          removeEmptyAttributes: true,
+          removeScriptTypeAttributes: true,
+          removeStyleLinkTypeAttributes: true,
+          processConditionalComments: true
+        }
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-playground`,
-    'gatsby-plugin-optimize-svgs',
+    
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
