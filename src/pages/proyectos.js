@@ -8,7 +8,7 @@ export default class proyectos extends Component{
 
         return(
             <Layout>
-                <Seo title="Proyectos" description="this is description" />
+                <Seo title="Proyectos" description="lista de mis proyectos personales realizaciados, con la finalidad de ser frontend developer" />
                 <Project />
             </Layout>
         )

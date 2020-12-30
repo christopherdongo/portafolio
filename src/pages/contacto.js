@@ -8,7 +8,7 @@ export default class contact extends Component{
 
         return(
             <Layout>
-                <Seo title="Contacto" description="this is description" />
+                <Seo title="Contacto" description="seccion para que me puedan contactar" />
                 <Contact />
             </Layout>
         )

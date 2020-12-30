@@ -3,17 +3,14 @@ import loadable from '@loadable/component';
 import Layout from "../components/Layout/layout";
 import { graphql } from "gatsby";
 import styles from "../css/tenplate.module.css";
-import { VscGithubInverted } from "react-icons/vsc";
-import { BiLinkAlt } from "react-icons/bi";
 import Img from 'gatsby-image';
 import Seo from '../components/SEO';
 import Spinner from '../components/spinner'
-
+import TemplateButton from './templatebutton'
 
 const OtherComponent = loadable(() => import('../components/technology/technology'),{
   fallback: <Spinner />,
 })
-
 
 const Template = ({ data }) => {
   //destructuring
@@ -49,36 +46,11 @@ const Template = ({ data }) => {
             <h2>Descripcion</h2>
             <p className={styles.texto}>{description}</p>
           </div>
-          <div className={styles.containButton}>
-            <div className={styles.containerGithub}>
-            <a
-              className={styles.repository}
-              href={repository}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <VscGithubInverted />
-            </a>
-            <p className={styles.cloudGithub}>Repositorio</p>
-            </div>
-            <div className={styles.containerLink}>
-            <a
-              className={styles.link}
-              href={link}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <BiLinkAlt />
-            </a>
-            <p className={styles.cloudLink}>Visitar</p>
-            </div>
-          </div>
+            <TemplateButton link={link} repository={repository} />
           <div className={styles.technology}>
             <h2>tecnologias</h2>
             <div className={styles.containerTechnology}>
-              
               <OtherComponent Tecnologies={Tecnologies} />
-              
             </div>
           </div>
         </section>

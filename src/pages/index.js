@@ -6,7 +6,7 @@ import Seo from '../components/SEO.js'
 
 export default ()=>(
   <Layout>
-    <Seo title="Home" description="this is description" />
+    <Seo title="Home" description="descripción corta de quién soy y lo que quiero llegar a ser" />
     <Descripcion />
   </Layout>
 )

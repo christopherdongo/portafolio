@@ -8,7 +8,7 @@ export default class habilidades extends Component{
 
         return(
             <Layout>
-                <Seo title="Habilidades" description="this is description" />
+                <Seo title="Habilidades" description="muestra de mis habilidades que se como frontend" />
                 <Skill />
             </Layout>
         )

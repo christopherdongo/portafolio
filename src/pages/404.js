@@ -6,7 +6,7 @@ const error404 =()=>{
 
     return(
         <>
-        <Seo title="Error" description="is this description" />
+        <Seo title="Error" description="pagina de error" />
         </>
     )
 }

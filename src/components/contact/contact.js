@@ -1,7 +1,7 @@
 import React from "react"
 import styles from "../../css/contact.module.css"
-import  {FaWhatsapp}  from "react-icons/fa"
 import { Formik, Form, Field, ErrorMessage } from "formik"
+import ContactApi from './contactapi';
 const Contact = () => {
   /*funcion para codificar los datos que se enviara a netlify*/
   const encode = data => {
@@ -11,18 +11,7 @@ const Contact = () => {
   }
   return (
     <main className={styles.containerContact}>
-      <section className={styles.containerWsp}>
-        <h1>Comunícate conmingo</h1>
-        <a
-          href="https://api.whatsapp.com/send?phone=+51919060263"
-          target="_blank"
-          rel="noreferrer"
-          className={styles.iconWsp}
-        >
-          <FaWhatsapp />
-          Escribeme
-        </a>
-      </section>
+        <ContactApi _/>
       <Formik
         initialValues={{
           name: "",
