@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React from "react";
 import styles from "../../css/skill.module.css";
 import skill from "../constants/skill";
 import tech from "../constants/tech";
@@ -14,10 +14,6 @@ const Skill = () => {
     return result
   }
   const myskill = SkillMap()
-
-  useEffect(() => {
-    SkillMap();
-  }, [myskill])
 
   return (
     <section className={styles.sectionPrincipal}>
