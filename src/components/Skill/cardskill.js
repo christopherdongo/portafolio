@@ -1,20 +1,19 @@
 import React from "react"
-import styles from '../../css/skill.module.css'
-const CardSkill = ({skill}) => {
+import loadable from '@loadable/component'
+import Spinner from '../spinner'
+const CardSkill = ({myskill}) => {
 
-    const {icon, name, text} = skill[0];
+   const OtherComponent = loadable(() => import('./card'),{
+    fallback: <Spinner />,
+  })
 
   return (
     <>
-      <article className={styles.container}>
-        <div className={styles.containerIcon}>
-          {icon}
-         <div className={styles.nameSkill}>
-            <h1>{name}</h1>
-            <p>{text}</p> 
-           </div> 
-        </div>
-      </article>
+     {
+       myskill.map((skill, index) =>(
+        <OtherComponent key={index} skill={skill} />
+       ))
+     }
     </>
   )
 }

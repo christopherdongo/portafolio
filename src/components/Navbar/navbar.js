@@ -56,9 +56,6 @@ const Nabvar=()=>{
                  })
                 }
             </ul>
-            <div className={styles.linksvacio}>
-                        
-            </div>
             </div>
 
             <div className={styles.navSocialLinks}>

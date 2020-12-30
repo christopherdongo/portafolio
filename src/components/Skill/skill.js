@@ -1,14 +1,9 @@
-import React from "react";
-import loadable from '@loadable/component';
+import React,{useEffect} from "react";
 import styles from "../../css/skill.module.css";
 import skill from "../constants/skill";
 import tech from "../constants/tech";
-import Spinner from '../spinner'
+import CardSkill from './cardskill';
 
-const OtherComponent = loadable(() => import('./cardskill'),{
-    fallback: <Spinner />,
-  })
-  
 
 const Skill = () => {
   const SkillMap = () => {
@@ -18,17 +13,17 @@ const Skill = () => {
     Tech.map(tech => result.push(skill.filter(node => node.name === tech)))
     return result
   }
-  const arr = SkillMap()
+  const myskill = SkillMap()
+
+  useEffect(() => {
+    SkillMap();
+  }, [myskill])
 
   return (
     <section className={styles.sectionPrincipal}>
       <h1 className={styles.title}>Mis Habilidades</h1>
       <div className={styles.card}>
-        {arr.map((skill, index) => {
-          return (
-              <OtherComponent key={index} skill={skill} />
-          )
-        })}
+        <CardSkill myskill={myskill} />
       </div>
     </section>
   )

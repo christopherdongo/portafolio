@@ -37,7 +37,7 @@ export default [
   {
     name: "Html5",
     icon: <Html5 />,
-    text:"sin duda es el esqueleto de una pagina web el, permite maquetar un sitio web",
+    text:"sin duda es el esqueleto de una pagina web, permite estructurar, maquetar un sitio web",
     tech:"Html5"
   },
   {
@@ -49,7 +49,7 @@ export default [
   {
     name: "ReactJS",
     icon: <ReactSVG />,
-    text:"Libreria escrita en javascript me gusta la facilida de reutilizacion de componentes",
+    text:"Libreria escrita en javascript me gusta la facilidad de reutilizacion de los componentes",
     tech:"React JS"
   },
   {
@@ -67,7 +67,7 @@ export default [
   {
     name: "NodeJS",
     icon: <Nodejs />,
-    text:"Permite utilizar javascript del lado del servidor, es muy eficiente en las API",
+    text:"Permite utilizar javascript del lado del servidor, es muy eficiente en las REST-API",
     tech:"Node JS"
   },
   {
