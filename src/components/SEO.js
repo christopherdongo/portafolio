@@ -20,12 +20,13 @@ query{
 const Seo =({title, description})=>{
   const {site} = useStaticQuery(getData);
   const { siteDesc, image, siteTitle,twitterUsername,siteUrl} = site.siteMetadata;
-  
+  console.log(image)
     return(
         <Helmet htmlAttributes={{lang:"en"}} title={`${title} | ${siteTitle}`}> 
           <meta name="description" content={description || siteDesc}></meta>
           <link rel="icon" href={icon} />
           <meta name="image" content={image}/>
+
            {/*fascebook card*/}
            <meta property="og:url" content={siteUrl}/>
            <meta property="og:type" content="website" />
