@@ -1,11 +1,11 @@
-import React from "react";
+import React, {memo} from "react";
 import styles from "../../css/skill.module.css";
 import skill from "../constants/skill";
 import tech from "../constants/tech";
 import CardSkill from './cardskill';
 
 
-const Skill = () => {
+const Skill = memo(() => {
   const SkillMap = () => {
     const result = []
     //transform:
@@ -23,5 +23,6 @@ const Skill = () => {
       </div>
     </section>
   )
-}
+})
+
 export default Skill

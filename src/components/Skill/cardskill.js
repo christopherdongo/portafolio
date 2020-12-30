@@ -1,18 +1,18 @@
-import React, {Suspense} from "react"
-import lazy from '@loadable/component'
+import React from "react"
+import loadable from '@loadable/component'
 import Spinner from '../spinner'
-
+import { timeout } from 'promise-timeout';
 const CardSkill = ({myskill}) => {
 
-   const OtherComponent = lazy(() => import('./card'))
+   const OtherComponent = loadable(() => timeout(import('./card'),2000), {
+    fallback: <Spinner />,
+   } )
 
   return (
     <>
      {
        myskill.map((skill, index) =>(
-        <Suspense key={index} fallback={<Spinner />}>
-          <OtherComponent key={index} skill={skill} />
-        </Suspense>
+        <OtherComponent key={index} skill={skill} />
        ))
      }
     </>
