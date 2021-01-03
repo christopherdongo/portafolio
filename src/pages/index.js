@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout/layout"
-import Descripcion from "../components/Home/descripcion"
+import Home from "../components/Home/home"
 import Seo from "../components/SEO.js"
 
 export const desc =
@@ -9,6 +9,6 @@ export const desc =
 export default () => (
   <Layout>
     <Seo title="Home" description={desc} />
-    <Descripcion />
+    <Home />
   </Layout>
 )

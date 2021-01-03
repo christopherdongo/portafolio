@@ -3,7 +3,6 @@ width: 100%;
  display: grid;
  grid-template-columns: 1fr;
  grid-template-rows: 30% 1fr;
- margin-top: 1.5rem;
  place-content: center;
  place-items: center;
  gap: 1rem;
@@ -11,6 +10,8 @@ width: 100%;
 .form{
     margin:2rem 1rem 2rem 1rem;
     height: 576px;
+    width: 80%;
+    max-width: 500px;
     background-color: var(--mainWhite);
     display: flex;
     flex-direction: column;
@@ -126,13 +127,11 @@ width: 100%;
     .container-contact{
         grid-template-rows: 1fr;
     }
-    .form{
-        width: 70%;
-    }
+
 }
 @media screen and (min-width:992px) {
     .container-contact{
-        grid-template-columns:40% 60%;
+        grid-template-columns:50% 50%;
         grid-row: 1fr;
         gap: 1rem;
      }

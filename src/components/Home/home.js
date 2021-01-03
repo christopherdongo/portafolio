@@ -2,6 +2,7 @@ import React from "react"
 import styles from "../../css/descripcion.module.css"
 import Img from 'gatsby-image'
 import {graphql, useStaticQuery} from 'gatsby'
+import TitleAnimation from './titleanimation'
 
 const getImagen = graphql`
 query{
@@ -14,11 +15,12 @@ query{
   }
   }
 `
-const Descripcion = () => {
+const Home = () => {
 
- 
   const data = useStaticQuery(getImagen);
   const {fixed} = data.defaultphoto.childImageSharp;
+  const words=['Frontend.','Developer.'];
+
   return (
     <main className={styles.container}>
       <div className={styles.firsRows}>
@@ -27,9 +29,9 @@ const Descripcion = () => {
         </div>
         <div className={styles.name}>
           <h1>Christopher Dongo Huarancca</h1>
-          <p>Frontend Developer</p>
-          
-        </div>
+          <TitleAnimation words={words} />
+        </div> 
+        
       </div>
       <div className={styles.description}>
         <p>
@@ -45,5 +47,5 @@ const Descripcion = () => {
   )
 }
 
-export default Descripcion
+export default Home
 
