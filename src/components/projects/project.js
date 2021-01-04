@@ -12,7 +12,7 @@ const getData = graphql`
           title
           slug
           image{
-            fluid(maxWidth: 500, quality: 100){
+            fluid(maxWidth:700 quality:100){
               ...GatsbyContentfulFluid_tracedSVG
             }
         }
