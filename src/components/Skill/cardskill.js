@@ -5,7 +5,7 @@ import Spinner from '../spinner';
 
 const CardSkill = ({myskill}) => {
 
-   const OtherComponent = loadable(() => timeout(import('./card'),3000), {
+   const OtherComponent = loadable(() => timeout(import('./card'),1000), {
     fallback: <Spinner />,
    } )
 
