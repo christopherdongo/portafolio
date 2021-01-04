@@ -88,7 +88,7 @@ query($singleslug: String) {
       description
     }
     views {
-      fluid(maxWidth: 900, quality: 100){
+      fluid(maxWidth: 700, quality: 100){
         ...GatsbyContentfulFluid_tracedSVG
       }
     }
