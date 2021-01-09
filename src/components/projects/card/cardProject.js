@@ -16,7 +16,6 @@ export default class CardProject extends Component{
     render(){
         //destructuring
         const {project} = this.state
-
         return(
             <div className={styles.cardCenter}>
                 {

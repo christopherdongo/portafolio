@@ -1,9 +1,9 @@
 .project{
-    padding-top: 2.5rem;
-    margin: 0 1rem;
+  padding-top: 1rem;
 }
 .project h1{
   text-align: center;
+  padding-bottom: 0.5rem;
 }
 .card-center{
     display: grid;
@@ -34,24 +34,27 @@
       opacity: 0.7;
   }
   .container-title{
-    width: 100%;
+    width: 99.8%;
     position: absolute;
     opacity: 0;
     top: 80%;
     left: 50%;
+    height: 40px ;
     transform: translate(-50%, -50%);
     letter-spacing: var(--mainSpacing);
-    padding: 0.4rem ;
     text-align: center;
     display: inline-block;
     background: #e1e3f0;
-  }
-  .title-projects {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .title-projects{
+    position: relative;
     font-size: 1.2rem;
+    margin: 0;
     transition: var(--mainTransition);
+    padding: 0;
   }
 
 /*enlace para los detalles*/
