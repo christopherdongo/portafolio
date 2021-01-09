@@ -3,7 +3,6 @@
 }
 .project h1{
   text-align: center;
-  padding-bottom: 0.5rem;
 }
 .card-center{
     display: grid;
@@ -37,7 +36,7 @@
     width: 99.8%;
     position: absolute;
     opacity: 0;
-    top: 80%;
+    top: 85%;
     left: 50%;
     height: 40px ;
     transform: translate(-50%, -50%);
@@ -51,7 +50,7 @@
   }
   .title-projects{
     position: relative;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin: 0;
     transition: var(--mainTransition);
     padding: 0;
@@ -109,6 +108,14 @@ width: 100%;
 .info-card ul li a{
     color: black;
     font-size: 1rem;
+}
+@media screen and (min-width:768px){
+  .container-title{
+    height: 60px;
+  }
+  .title-projects{
+    font-size: 1.8rem;
+  }
 }
 @media screen and (min-width: 992px){
     .card-center{
