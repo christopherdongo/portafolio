@@ -3,7 +3,7 @@ import { VscGithubInverted } from "react-icons/vsc"
 import { BiLinkAlt } from "react-icons/bi"
 import styles from "../css/tenplate.module.css"
 
-export default function TemplateButton ({ link, repository }){
+export default function TemplateButton({ link, repository }) {
   return (
     <div className={styles.containButton}>
       <div className={styles.containerGithub}>
@@ -13,7 +13,7 @@ export default function TemplateButton ({ link, repository }){
           target="_blank"
           rel="noreferrer"
         >
-          <VscGithubInverted />
+          <VscGithubInverted   />
         </a>
         <p className={styles.cloudGithub}>Repositorio</p>
       </div>
@@ -26,5 +26,3 @@ export default function TemplateButton ({ link, repository }){
     </div>
   )
 }
-
-

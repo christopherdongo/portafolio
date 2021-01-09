@@ -182,12 +182,13 @@ border-radius: 50%;
   height: 100px !important;
   width: 100px !important;
   }
-
+.title-proyecto{
+  font-size: 2rem;
+}
 .texto{
   font-size: 1.2rem;
   letter-spacing: 1px;
   text-align: center;
-  padding-bottom: 1rem;
 }
 .cloud{
   position: absolute;
@@ -199,9 +200,13 @@ border-radius: 50%;
   transform: translateY(220%);
   border-radius: 20px;
 }
-.cloud h1{
+.cloud-text{
+  display: flex;
+  align-items:  center;
   text-align: center;
+  font-size: 1rem;
 }
+
 .cloud::before{
   content: ' ';
   position: absolute;

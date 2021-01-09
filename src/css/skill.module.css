@@ -34,11 +34,12 @@
     transition: var(--mainTransition);
 }
 .name-skill{
+    margin: 0;
     position: absolute;
     height:160px;
     width: 100%;
     display:flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
     opacity: 0;
@@ -66,8 +67,9 @@
 }
 /*cierre del efecto*/
    .title{
-       font-family: sans-serif;
+    font-family: sans-serif;
     text-align: center;
+    margin-top: 0;
    }
    .container-icon svg{
          width: 120px !important;
@@ -79,10 +81,12 @@
    width: 100px !important;
    }
    .name-skill h1{
+       margin: 0;
        text-align: center;
        font-family: sans-serif;
        font-weight: 700;
        font-display: swap;
+       font-size: 1.5rem;
    }
    .name-skill p{
        font-size: 1rem;
@@ -90,7 +94,9 @@
        width: 90%;
        font-family: sans-serif;
        font-display: swap;
+       font-weight: 500;
    }
+
    /*media query*/
    @media screen and (min-width: 1440px){
    article:nth-child(13){

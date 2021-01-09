@@ -56,7 +56,6 @@ const Contact = () => {
           data-netlify={true}
         >
           <h1>Contactame</h1>
-          <div className={styles.line}></div>
           <div>
             <label htmlFor="name" className={styles.label}>
               Nombre<span className={styles.span}>*</span>:{" "}
@@ -84,7 +83,7 @@ const Contact = () => {
             </label>
             <Field
               cols="50"
-              rows="12"
+              rows="8"
               type="text"
               name="message"
               component="textarea"

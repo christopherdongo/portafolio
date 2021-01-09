@@ -34,7 +34,7 @@ const Template = ({ data }) => {
     <Layout>
       <Seo title={title} description="this is description" />
       <main className={styles.templateprojects}>
-      <h1 className={styles.texto}>{title}</h1>
+      <h1 className={styles.titleProyecto}>{title}</h1>
           <div className={styles.imgContainer}>
           {Projectimages.map((item, index) => (
             <Img key={index} fluid={item.fluid} title={title} className={styles.images} />

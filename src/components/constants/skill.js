@@ -31,7 +31,7 @@ export default [
   {
     name: "Css",
     icon: <Css3 />,
-    text:"me permite brindar color vida a mis proyectos",
+    text:"Me permite brindar color vida a mis proyectos",
     tech:"CSS"
   },
   {
@@ -61,7 +61,7 @@ export default [
   {
     name: "MongoDB",
     icon: <Mongodb />,
-    text:"La base de datos NOSQL basado en documentos es muy util y para realizar las consultas se utiliza javascript",
+    text:"Es una base de datos muy rapido de aprender y esta basado en documentos",
     tech:"MongoDB"
   },
   {
@@ -73,13 +73,13 @@ export default [
   {
     name: "Bootstrap4",
     icon: <Bootstrap />,
-    text:"Framework de CSS que ayuda y brinda facilidad en el desarrollo web",
+    text:"Framework de CSS que ayuda y brinda facilidad en el desarrollo web.",
     tech:"Bootstrap 4"
   },
   {
     name: "Styled Components",
     icon: <StyledComponents />,
-    text:"liberia basado en javascript permite crear componentes y dar estilo al mismo tiempos y entre otros beneficios",
+    text:"liberia basado en javascript permite crear componentes y dar estilo al mismo tiempo.",
     tech:"Styled Components"
   },
   {
@@ -97,13 +97,13 @@ export default [
   {
     name: "Github",
     icon: <Github />,
-    text:"permite llevar un control de versiones de nuestros desarrollos de manera eficiente",
+    text:"Me permite llevar un control de versiones de mis desarrollos",
     tech:"Github"
   },
   {
     name: "Linux",
     icon: <Linux />,
-    text:"Mi sistema operativo preferido me considero un linuxero!!, he aprendido mucho de el y sigo en el aprendizaje constante",
+    text:"Mi sistema operativo preferido me considero un linuxero!!",
     tech:"Linux"
   },
   {
