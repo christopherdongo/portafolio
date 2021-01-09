@@ -63,12 +63,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-postcss`,
-      options: {
-        postCssPlugins: [require(`postcss-preset-env`)({ stage: 0 })],
-      },
-    },
-    {
       resolve: `gatsby-plugin-mini-css-class-name`,
       options: {
         prefix: `x-`,

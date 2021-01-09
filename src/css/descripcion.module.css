@@ -1,7 +1,7 @@
 .container {
-  margin:3rem;
+  margin: 2rem;
   display: grid;
-  grid-template-columns: 1fr ;
+  grid-template-columns: 1fr;
   gap: 2rem;
 }
 .firs-rows {
@@ -11,31 +11,31 @@
   align-items: center;
 }
 .name {
-  padding-top: 20px;
   display: grid;
   place-items: center;
-  gap: 20px;
+  gap: 10px;
   margin-bottom: 2rem;
 }
 .name h1 {
+  margin: 0;
   text-align: center;
   letter-spacing: 0.2rem;
-   transform:  matrix(1, 0, 0, 1, 0, 0);
-   font-size: 2.1rem;
-   font-weight: 800;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  font-size: 2rem;
+  font-weight: 800;
 }
-.title-animation{
+.title-animation {
   font-size: 2.2rem;
   font-weight: 700;
   color: var(--clr-primary-1);
 }
-.name p{
+.name p {
   text-align: center;
-    font-weight: 900;
-    letter-spacing: 0.1rem;
-    font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+  font-size: 1.5rem;
 }
-.container-imagen{
+.container-imagen {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -49,18 +49,21 @@
   border: 10px solid white;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0px 4px;
 }
-.description{
-    margin:0.5rem;
+.description {
+  margin: 0.5rem;
 }
-.description p{
-    text-align: justify;
-    font-size: 1.2rem;
-    font-weight: bold;
-    font-weight: 300;
-    line-height: 30px;
+.description p {
+  text-align: justify;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-weight: 300;
+  line-height: 30px;
 }
 
 @media screen and (min-width: 768px) {
+  .container {
+    margin: 3rem;
+  }
   .firs-rows {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -68,7 +71,7 @@
     align-items: center;
     margin: 0 2rem;
   }
-  .container-imagen{
+  .container-imagen {
     margin: auto;
   }
   .name {
@@ -76,26 +79,28 @@
     justify-content: center;
     flex-direction: column;
     text-align: start;
-  }
-  .name {
     font-size: 1.5rem;
   }
-  .description{
-      display: grid;
-      grid-template-columns:repeat(6, 2fr)
+  .name h1 {
+    font-size: 2.1rem;
+    font-weight: 700;
   }
-  .description p{
-    grid-column:2/6;
+  .description {
+    display: grid;
+    grid-template-columns: repeat(6, 2fr);
+  }
+  .description p {
+    grid-column: 2/6;
   }
 }
 
-@media screen and (min-width:1440px){
-  .container{
+@media screen and (min-width: 1440px) {
+  .container {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 250px;
-  } 
+  }
 
-  .description p{
+  .description p {
     font-size: 1.5rem;
-}
+  }
 }
