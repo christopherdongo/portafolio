@@ -4,7 +4,7 @@ import Home from "../components/Home/home"
 import Seo from "../components/SEO.js"
 
 export const desc =
-  "Portafolio realizado con la finalidad de dar a conocer mis conocimientos en el frontend, contiene proyectos personales que me han permitido a consolidar mis conocimientos"
+  "Portafolio realizado con la tecnología Gatsby, contiene proyectos personales que me han permitido consolidar mis conocimientos en el front end"
 
 export default () => (
   <Layout>
