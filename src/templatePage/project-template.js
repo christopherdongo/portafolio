@@ -80,9 +80,6 @@ query($singleslug: String) {
       Bootstrap4
       NodeJS
       ExpressJS
-      Gatsby
-      GQL
-      Contentfull
     }
     description {
       description

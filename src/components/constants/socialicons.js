@@ -5,7 +5,7 @@ import {FaFacebook, FaGithub, FaLinkedinIn,FaTwitter} from 'react-icons/fa'
 export default [
     {
         icon:<FaFacebook color="hsl(208, 92%, 53%)"/>,
-        url:"https://www.facebook.com"
+        url:"https://www.facebook.com/tdhris/"
     },
     {
         icon:<FaGithub color="hsl(0, 5%, 9%)" />,
@@ -17,6 +17,6 @@ export default [
     },
     {
         icon:<FaTwitter color="hsl(203, 89%, 53%)"/>,
-        url:"https://www.twitter.com"
+        url:"https://www.twitter.com/tdhris"
     }
 ]

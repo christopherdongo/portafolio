@@ -1,5 +1,7 @@
 .project{
   padding-top: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .project h1{
   text-align: center;
