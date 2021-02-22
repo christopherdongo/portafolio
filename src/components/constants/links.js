@@ -11,5 +11,6 @@ export default[
     {
         path:'/contacto',
         text:'Contacto'
-    }
+    },
+    
 ]
