@@ -1,5 +1,6 @@
 
-export default [
+
+const tech = [
     {
         "Javascript":"Javascript",
         "Css":"Css",
@@ -18,3 +19,5 @@ export default [
         "Bash":"Bash"
     }
 ]
+
+export default tech;

@@ -28,6 +28,8 @@ const Nabvar=()=>{
     const logo = useStaticQuery(getLogo)
     const {fixed} =  logo.logo.childImageSharp;
 
+    console.log(links)
+
     return(
         <nav className={styles.navbar}>
          <div className={styles.navCenter}>

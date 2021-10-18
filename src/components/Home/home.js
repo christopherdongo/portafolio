@@ -1,31 +1,31 @@
 import React from "react"
 import * as styles from "../../css/descripcion.module.css"
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import {graphql, useStaticQuery} from 'gatsby'
 import TitleAnimation from './titleanimation'
 
-const getImagen = graphql`
+const getImagenProfile = graphql`
 query{
   defaultphoto:file(relativePath:{eq:"christopher_dongo.jpg"}){
     childImageSharp{
-      fixed(width:240 height:300){
-        ...GatsbyImageSharpFixed_tracedSVG
-      }
+       gatsbyImageData(width:240 height:300)
+      
     }
   }
   }
 `
 const Home = () => {
 
-  const data = useStaticQuery(getImagen);
-  const {fixed} = data.defaultphoto.childImageSharp;
+  const data = useStaticQuery(getImagenProfile);
+  const image = getImage(data.defaultphoto);
+
   const words=['Frontend.','Developer.'];
 
   return (
     <main className={styles.container}>
       <div className={styles.firsRows}>
         <div className={styles.containerImagen}>
-         <Img fixed={fixed} alt="imagen de photo" className={styles.avatar} />
+         <GatsbyImage image={image} alt="imagen de photo" className={styles.avatar}/>
         </div>
         <div className={styles.name}>
           <h1>Christopher Dongo Huarancca</h1>
@@ -46,4 +46,3 @@ const Home = () => {
 }
 
 export default Home
-

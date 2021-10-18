@@ -45,7 +45,6 @@
   border-radius: 50%;
   /*max-width:60%;*/
   object-fit: cover;
-  width: 100%;
   border: 10px solid white;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0px 4px;
 }

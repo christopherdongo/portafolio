@@ -21,7 +21,7 @@ import Linux from '../../assets/linux.inline.svg';
 import Bash from '../../assets/bash.inline.svg'
 
 
-export default [
+const skill = [
   {
     name: "Javascript",
     icon: <Javascript />,
@@ -137,3 +137,5 @@ export default [
     tech:"Contentfull"
   }
 ]
+
+export default skill;

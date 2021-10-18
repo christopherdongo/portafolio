@@ -2,7 +2,7 @@ import React from 'react';
 import {FaFacebook, FaGithub, FaLinkedinIn,FaTwitter} from 'react-icons/fa'
 
 
-export default [
+const socialicons = [
     {
         icon:<FaFacebook color="hsl(208, 92%, 53%)"/>,
         url:"https://www.facebook.com/tdhris/"
@@ -20,3 +20,6 @@ export default [
         url:"https://www.twitter.com/tdhris"
     }
 ]
+
+
+export default socialicons;
