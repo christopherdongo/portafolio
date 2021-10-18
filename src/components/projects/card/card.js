@@ -1,6 +1,6 @@
 import React from "react"
 import Image from "gatsby-image"
-import styles from "../../../css/project.module.css"
+import * as styles from "../../../css/project.module.css"
 import Proptypes from "prop-types"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 

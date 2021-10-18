@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "../../css/contact.module.css"
+import * as styles from "../../css/contact.module.css"
 import { Formik, Form, Field, ErrorMessage } from "formik"
 import ContactApi from './contactapi';
 const Contact = () => {

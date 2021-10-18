@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../css/skill.module.css'
+import * as styles from '../../css/skill.module.css'
 
 export default function Card({skill}){
 

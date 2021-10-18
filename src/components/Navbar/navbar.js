@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import styles from '../../css/navbar.module.css';
+import * as styles from '../../css/navbar.module.css';
 import {FaAlignRight} from 'react-icons/fa';
 import links from '../constants/links';
 import socialicons from '../constants/socialicons';
@@ -57,7 +57,6 @@ const Nabvar=()=>{
                 }
             </ul>
             </div>
-
             <div className={styles.navSocialLinks}>
                 {socialicons.map( (icons, index)=>{
                     return(

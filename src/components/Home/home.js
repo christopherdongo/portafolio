@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "../../css/descripcion.module.css"
+import * as styles from "../../css/descripcion.module.css"
 import Img from 'gatsby-image'
 import {graphql, useStaticQuery} from 'gatsby'
 import TitleAnimation from './titleanimation'

@@ -1,7 +1,7 @@
 import React from "react"
 import { VscGithubInverted } from "react-icons/vsc"
 import { BiLinkAlt } from "react-icons/bi"
-import styles from "../css/tenplate.module.css"
+import * as styles from "../css/tenplate.module.css"
 
 export default function TemplateButton({ link, repository }) {
   return (

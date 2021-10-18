@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../css/project.module.css'
+import * as styles from '../../css/project.module.css'
 import {graphql, useStaticQuery} from 'gatsby'
 import CardProject from './card/cardProject'
 

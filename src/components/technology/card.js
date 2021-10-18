@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "../../css/tenplate.module.css"
+import * as styles from "../../css/tenplate.module.css"
 
 export default function Card({ techproject }) {
   return (

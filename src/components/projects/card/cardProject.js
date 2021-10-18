@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import styles from '../../../css/project.module.css'
+import * as styles from '../../../css/project.module.css'
 import Card from './card'
 
 export default class CardProject extends Component{

@@ -1,6 +1,6 @@
 import React, {useRef} from "react"
 import Typist from "react-typist"
-import styles from '../../css/descripcion.module.css'
+import * as styles from '../../css/descripcion.module.css'
 
 export default function TitleAnimation({words}) {
 

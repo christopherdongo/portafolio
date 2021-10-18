@@ -1,6 +1,6 @@
 import React from 'react';
 import  {FaWhatsapp}  from "react-icons/fa";
-import styles from "../../css/contact.module.css";
+import * as styles from "../../css/contact.module.css";
 
 export default function ContactApi(){
 

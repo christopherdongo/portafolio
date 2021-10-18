@@ -2,7 +2,7 @@ import React from "react";
 import loadable from '@loadable/component';
 import Layout from "../components/Layout/layout";
 import { graphql } from "gatsby";
-import styles from "../css/tenplate.module.css";
+import * as styles from "../css/tenplate.module.css";
 import Img from 'gatsby-image';
 import Seo from '../components/SEO';
 import Spinner from '../components/spinner'
