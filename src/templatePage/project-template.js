@@ -4,6 +4,7 @@ import Layout from "../components/Layout/layout";
 import { graphql } from "gatsby";
 import * as styles from "../css/tenplate.module.css";
 import Img from 'gatsby-image';
+import {Image,GatsbyImage} from 'gatsby-plugin-image'
 import Seo from '../components/SEO';
 import Spinner from '../components/spinner'
 import TemplateButton from './templatebutton'

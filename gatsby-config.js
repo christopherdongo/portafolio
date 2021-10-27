@@ -8,7 +8,7 @@ module.exports = {
     title: "Portafolio",
     description:"Portafolio de mis proyectos Personales",
     author: "Christopher Dongo",
-    data: {name:"christopher", year:28},
+    data: {name:"christopher", year:29},
     twitterUsername:"@tdhris",
     facebookUsername: "Christopher Dongo H",
     image:'images/defaultBcg.jpeg',
@@ -40,9 +40,9 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        spaceId: process.env.CONTENTFUL_SPACE_ID || 'gfkx4627b3pb',
         // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || '4BuRXmFWAlaUFCYCApcd4upDJjLkZUshPIUv35cLj0E',
         forceFullSync: true,  
       }
     },

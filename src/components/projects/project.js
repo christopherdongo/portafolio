@@ -5,6 +5,36 @@ import CardProject from './card/cardProject'
 
 const getData = graphql`
 {
+  projects:allContentfulProjects{
+    edges{
+      node{
+        contentful_id
+        title
+        slug
+        image{
+    gatsbyImageData(width:700 quality:100)
+        }
+    }
+    }
+  }
+}
+`
+const Project=()=>{
+    //recibiendo data content
+    const {projects} = useStaticQuery(getData)
+    return(
+        <main className={styles.project}>
+           <h1>Proyectos</h1>
+         <CardProject projects={projects}  />
+        </main>
+    )
+}
+
+export default Project
+
+
+/*
+{
     projects:allContentfulProjects{
       edges{
         node{
@@ -20,16 +50,4 @@ const getData = graphql`
       }
     }
   }
-`
-const Project=()=>{
-    //recibiendo data content
-    const {projects} = useStaticQuery(getData)
-    return(
-        <main className={styles.project}>
-           <h1>Proyectos</h1>
-         <CardProject projects={projects}  />
-        </main>
-    )
-}
-
-export default Project
+*/

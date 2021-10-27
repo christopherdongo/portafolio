@@ -9,7 +9,6 @@ query{
   defaultphoto:file(relativePath:{eq:"christopher_dongo.jpg"}){
     childImageSharp{
        gatsbyImageData(width:240 height:300)
-      
     }
   }
   }

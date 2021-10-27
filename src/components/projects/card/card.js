@@ -1,5 +1,5 @@
 import React from "react"
-import Image from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import * as styles from "../../../css/project.module.css"
 import Proptypes from "prop-types"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
@@ -7,10 +7,12 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 const Card = ({ project }) => {
   const { image, slug, title } = project
 
+  const Image = getImage(image);
+
   return (
     <article className={styles.card}>
       <div className={styles.imagenContainer}>
-        <Image fluid={image.fluid} className={styles.imagen} alt="imagen-alt" />
+        <GatsbyImage image={Image} className={styles.imagen} alt="imagen-alt" />
         <AniLink fade className={styles.link} to={`/proyectos/${slug}`}>
           Detalles
         </AniLink>
