@@ -12,7 +12,7 @@ const getData = graphql`
         title
         slug
         image{
-    gatsbyImageData(width:700 quality:100)
+    gatsbyImageData(width:700 quality:50)
         }
     }
     }

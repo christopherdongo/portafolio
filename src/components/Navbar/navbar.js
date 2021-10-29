@@ -32,7 +32,10 @@ const Nabvar=()=>{
         <nav className={styles.navbar}>
          <div className={styles.navCenter}>
              <div className={styles.navHeader}>
-                 <AniLink to="/" fade >
+                 <AniLink to="/" swipe 
+                 direction="left"
+                 duration={1.1}
+                 hex="#663399">
                 <Img fixed={fixed}  className={styles.logo}/>
                  </AniLink>
                  <button type="button" className={styles.logoBtn} onClick={isOpenToggle} aria-label="boton toggle">
@@ -47,7 +50,18 @@ const Nabvar=()=>{
                      return(
                      <li key={index}>
                          <AniLink 
-                         fade
+                         swipe
+                         direction="left"
+                         duration={1.1}
+                         bg="
+                           url(https://source.unsplash.com/random)
+                           center / cover   /* position / size */
+                           no-repeat        /* repeat */
+                           fixed            /* attachment */
+                           padding-box      /* origin */
+                           content-box      /* clip */
+                           white            /* color */
+                         "
                          to={link.path} 
                          aria-label="Read more about Seminole tax hike"
                          >{link.text}</AniLink>
