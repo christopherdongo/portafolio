@@ -16,15 +16,15 @@ query{
 const Home = () => {
 
   const data = useStaticQuery(getImagenProfile);
-  const image = getImage(data.defaultphoto);
-
+  const Image = getImage(data.defaultphoto);
+  console.log(Image)
   const words=['Frontend.','Developer.'];
 
   return (
     <main className={styles.container}>
       <div className={styles.firsRows}>
         <div className={styles.containerImagen}>
-         <GatsbyImage image={image} alt="imagen de photo" className={styles.avatar}/>
+         <GatsbyImage image={Image} alt="imagen de photo" className={styles.avatar}/>
         </div>
         <div className={styles.name}>
           <h1>Christopher Dongo Huarancca</h1>

@@ -4,20 +4,20 @@ import {FaAlignRight} from 'react-icons/fa';
 import links from '../constants/links';
 import socialicons from '../constants/socialicons';
 import AniLink from "gatsby-plugin-transition-link/AniLink";
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import {graphql, useStaticQuery} from 'gatsby';
-import Img from 'gatsby-image';
+
 
 const getLogo = graphql`
 query{
     logo:file(relativePath:{eq:"logo1.png"}){
       childImageSharp{
-        fixed(width:150 height:40){
-            ...GatsbyImageSharpFixed_tracedSVG
-        }
+       gatsbyImageData(width:150 height:40)
       }
     }
     }
 `
+
 const Nabvar=()=>{
     const [opentogle, setOpenTogle] = useState(false)
     //funcion toggle
@@ -26,7 +26,7 @@ const Nabvar=()=>{
     }
     //logo
     const logo = useStaticQuery(getLogo)
-    const {fixed} =  logo.logo.childImageSharp;
+    const Image = getImage(logo.logo)
 
     return(
         <nav className={styles.navbar}>
@@ -36,7 +36,7 @@ const Nabvar=()=>{
                  direction="left"
                  duration={1.1}
                  hex="#663399">
-                <Img fixed={fixed}  className={styles.logo}/>
+                <GatsbyImage image={Image} alt="imagen del logo"  className={styles.logo} />
                  </AniLink>
                  <button type="button" className={styles.logoBtn} onClick={isOpenToggle} aria-label="boton toggle">
                      <FaAlignRight className={styles.logoIcon} />

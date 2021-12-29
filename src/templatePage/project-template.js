@@ -3,8 +3,7 @@ import loadable from '@loadable/component';
 import Layout from "../components/Layout/layout";
 import { graphql } from "gatsby";
 import * as styles from "../css/tenplate.module.css";
-import Img from 'gatsby-image';
-import {Image,GatsbyImage} from 'gatsby-plugin-image'
+import {getImage,GatsbyImage} from 'gatsby-plugin-image'
 import Seo from '../components/SEO';
 import Spinner from '../components/spinner'
 import TemplateButton from './templatebutton'
@@ -31,6 +30,13 @@ const Template = ({ data }) => {
   /*convertir a arrays*/
   const Tecnologies = Object.values(technology[0]).filter(node => node != null)
 
+  const imageTrans=(val)=>{
+    const Image = getImage(val);
+    return Image
+  }
+  
+
+
   return (
     <Layout>
       <Seo title={title} description="this is description" />
@@ -38,7 +44,7 @@ const Template = ({ data }) => {
       <h1 className={styles.titleProyecto}>{title}</h1>
           <div className={styles.imgContainer}>
           {Projectimages.map((item, index) => (
-            <Img key={index} fluid={item.fluid} title={title} className={styles.images} />
+            <GatsbyImage key={index} image={imageTrans(item)} title={title} className={styles.images} alt="imagenes de tecnologia"/>
           ))}
           </div>
            
@@ -86,9 +92,7 @@ query($singleslug: String) {
       description
     }
     views {
-      fluid(maxWidth: 700, quality: 100){
-        ...GatsbyContentfulFluid_tracedSVG
-      }
+      gatsbyImageData(width:700 quality:50)
     }
   }
 }

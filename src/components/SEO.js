@@ -2,7 +2,7 @@ import React from 'react';
 import {Helmet} from 'react-helmet';
 import PropTypes from "prop-types"
 import {StaticQuery,graphql} from 'gatsby';
-import icon from '../../static/logo.ico'
+import icon from '../assets/images/logo.ico'
 
 
 const Seo =({title, description,postData, postImage,frontmatter = {} }) => (
