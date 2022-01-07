@@ -2,40 +2,30 @@ import React from "react";
 import loadable from '@loadable/component';
 import Layout from "../components/Layout/layout";
 import { graphql } from "gatsby";
+import { timeout } from 'promise-timeout'
+
 import * as styles from "../css/tenplate.module.css";
-import {getImage,GatsbyImage} from 'gatsby-plugin-image'
+import {GatsbyImage} from 'gatsby-plugin-image'
 import Seo from '../components/SEO';
 import Spinner from '../components/spinner'
 import TemplateButton from './templatebutton'
+import { useTemplate } from "../hooks/useTemplate";
 
-const OtherComponent = loadable(() => import('../components/technology/technology'),{
+
+const OtherComponent = loadable(() => timeout(import('../components/technology/technology'),6000),{
   fallback: <Spinner />,
 })
 
 const Template = ({ data }) => {
+  const {projects} = data;
   //destructuring
-  const { projects } = data
-  const {
-    title,
-    repository,
-    link,
-    views,
-    technology,
-    description: { description },
-  } = projects
-
-  //desctructuring imagen
-  const [...Projectimages] = views
-
-  /*convertir a arrays*/
-  const Tecnologies = Object.values(technology[0]).filter(node => node != null)
-
-  const imageTrans=(val)=>{
-    const Image = getImage(val);
-    return Image
-  }
-  
-
+ const { imageTrans,
+  Tecnologies,
+  Projectimages,
+  title,
+  repository,
+  link,
+  description} = useTemplate(projects)
 
   return (
     <Layout>

@@ -115,7 +115,7 @@
   font-size: 0.9rem;
   border-radius: 10px;
   padding: 0.7rem;
-  transform: translateY(140%);
+  Transform: translateY(140%);
   background-color: var(--mainWhite);
   box-shadow: var(--darkShadow);
   z-index: 1000;
@@ -130,7 +130,7 @@
   padding: 0.7rem;
   background-color: var(--mainWhite);
   box-shadow: var(--darkShadow);
-  transform: translateY(140%);
+  Transform: translateY(140%);
   z-index: 1000;
   display: none;
   transition: all .5s ease-in-out
@@ -197,7 +197,7 @@ border-radius: 50%;
   display: none;
   width: 60%;
   height: 40px;
-  transform: translateY(220%);
+  Transform: translateY(220%);
   border-radius: 20px;
 }
 .cloud-text{

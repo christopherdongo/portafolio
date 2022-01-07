@@ -17,7 +17,7 @@ const Home = () => {
 
   const data = useStaticQuery(getImagenProfile);
   const Image = getImage(data.defaultphoto);
-  console.log(Image)
+
   const words=['Frontend.','Developer.'];
 
   return (

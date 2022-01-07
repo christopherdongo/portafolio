@@ -3,7 +3,7 @@ import * as styles from '../../../css/project.module.css'
 import Card from './card'
 
 export default class CardProject extends Component{
-    
+
     state={
         project:this.props.projects.edges
     }

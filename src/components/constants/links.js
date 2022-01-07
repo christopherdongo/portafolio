@@ -5,6 +5,10 @@ const links =  [
             text:'Sobre Mi'
         },
         {
+            path:'/habilidades',
+            text:'Habilidades'
+        },
+        {
             path:'/proyectos',
             text:'Proyectos'
         },
