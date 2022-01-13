@@ -33,9 +33,9 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID ,
+        spaceId: process.env.CONTENTFUL_SPACE_ID || 'gfkx4627b3pb',
         // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || '4BuRXmFWAlaUFCYCApcd4upDJjLkZUshPIUv35cLj0E',
         
       }
     },
@@ -82,7 +82,8 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-transition-link`,
     `gatsby-plugin-remove-fingerprints`,
-    `gatsby-plugin-playground`
+    `gatsby-plugin-playground`,
+
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
