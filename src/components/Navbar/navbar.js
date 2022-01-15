@@ -6,6 +6,7 @@ import socialicons from '../constants/socialicons';
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import {graphql, useStaticQuery} from 'gatsby';
+import {globalHistory} from '@reach/router';
 
 
 const getLogo = graphql`
@@ -27,24 +28,16 @@ const Nabvar=()=>{
         setOpenTogle( opentogle => !opentogle)
     }
 
-
     //logo
     const logo = useStaticQuery(getLogo)
     const Image = getImage(logo.logo)
  
        useEffect(()=>{
-        if(typeof window !== "undefined"){
-           setPathname(window.location.pathname)
+        if(globalHistory.location){
+           setPathname(globalHistory.location.pathname)
         }
-       },[])
-
-    useEffect(()=>{
-        if(window.location.pathname !== pathname){
-            setOpenTogle(false)
-        }
-
-    },[opentogle]);
-
+        //react-hooks/exhaustive-deps
+       },[pathname])
 
     return(
         <nav className={styles.navbar}>
