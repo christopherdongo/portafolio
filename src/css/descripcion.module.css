@@ -7,8 +7,10 @@
 .firs-rows {
   display: flex;
   flex-direction: column-reverse;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  gap: 0.5rem;
+  min-height: 80vh;
 }
 .name {
   display: grid;
@@ -43,7 +45,7 @@
 .avatar {
   margin: 0;
   border-radius: 50%;
-  /*max-width:60%;*/
+  max-width:70%;
   object-fit: cover;
   border: 10px solid white;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0px 4px;
@@ -70,6 +72,7 @@
     grid-column-gap: 1rem;
     align-items: center;
     margin: 0 2rem;
+    min-height: 100%;
   }
   .container-imagen {
     margin: auto;
@@ -91,6 +94,9 @@
   }
   .description p {
     grid-column: 2/6;
+  }
+  .avatar{
+    max-width: 100%;
   }
 }
 
