@@ -20,6 +20,7 @@ query{
 
 const Nabvar=()=>{
     const [opentogle, setOpenTogle] = useState(false)
+    const [pathname, setPathname] = useState('');
 
     //funcion toggle
     const isOpenToggle=()=>{
@@ -30,13 +31,15 @@ const Nabvar=()=>{
     //logo
     const logo = useStaticQuery(getLogo)
     const Image = getImage(logo.logo)
-    //let pathname = window.location.pathname;
-
-       let pathname =  window.location.pathname;
-
+ 
+       useEffect(()=>{
+        if(typeof window !== "undefined"){
+           setPathname(window.location.pathname)
+        }
+       },[])
 
     useEffect(()=>{
-        if(window.location.pathname != pathname){
+        if(window.location.pathname !== pathname){
             setOpenTogle(false)
         }
 
