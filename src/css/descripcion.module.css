@@ -7,7 +7,7 @@
 .firs-rows {
   display: flex;
   flex-direction: column-reverse;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   gap: 0.5rem;
   min-height: 80vh;
