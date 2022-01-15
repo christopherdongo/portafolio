@@ -7,11 +7,14 @@ export default class CardProject extends Component{
     state={
         project:this.props.projects.edges
     }
-    componentDidMount(){
+
+    componentDidUpdate(prevProps, prevState){
+        if (prevState.title !== this.state.project.title) {
         this.setState({
             project:this.props.projects.edges,
             
         })
+    }
     }
     render(){
         //destructuring

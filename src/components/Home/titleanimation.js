@@ -18,9 +18,9 @@ export default function TitleAnimation({words}) {
       >
         {words.map((word, index) => (
           <span key={index}>
-            <Typist.Delay ms={1100} />
+            <Typist.Delay ms={500} />
             <span className={styles.titleAnimation}>{word}</span>
-            <Typist.Backspace count={word.length}/>
+            <Typist.Backspace count={word.length} delay={1000}/>
           </span>
         ))}
       </Typist>

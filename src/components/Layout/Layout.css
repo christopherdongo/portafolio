@@ -29,51 +29,56 @@ a{
   text-decoration: none;
 }
 html {
-    position: relative;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 body{
     font-family: sans-serif;
     line-height: 1.4;
     font-size: 1rem;  
-    height: 100%;
     position: relative;
-    overflow:auto ;
-    background: var(darkGrey);
+    overflow:hidden;
+    background: var(--darkGrey);
 }
 .container-principal{
     display: flex;
     flex-direction: column;
     margin-top: 3.5rem;
+    height: 100vh;
+    overflow: scroll;
+    padding-bottom: 2rem;
   }
 
 
 /*scroll*/
 /* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
 
-body::-webkit-scrollbar {
+.container-principal::-webkit-scrollbar {
   -webkit-appearance: none;
 }
-body::-webkit-scrollbar:vertical {
+.container-principal::-webkit-scrollbar:vertical {
   width:10px;
 }
-body::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+.container-principal::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
   display: none;
 } 
-body::-webkit-scrollbar:horizontal {
+.container-principal::-webkit-scrollbar:horizontal {
   height: 10px;
 }
-body::-webkit-scrollbar-thumb {
+.container-principal::-webkit-scrollbar-thumb {
   background-color: #797979;
   border-radius: 20px;
   border: 2px solid #f1f2f3;
 }
-body::-webkit-scrollbar-track {
+.container-principal::-webkit-scrollbar-track {
   border-radius: 10px;  
 }
 /*Estilos estándar experimentales (Principalmente Firefox)*/
 body{
 scrollbar-color: rgba(0, 0, 0, .5) rgba(0, 0, 0, 0);
 scrollbar-width: thin;
+}
+
+.tl-edges{
+  overflow:hidden;
 }

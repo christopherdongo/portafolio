@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import * as styles from '../../css/navbar.module.css';
 import {FaAlignRight} from 'react-icons/fa';
 import links from '../constants/links';
@@ -20,13 +20,28 @@ query{
 
 const Nabvar=()=>{
     const [opentogle, setOpenTogle] = useState(false)
+
     //funcion toggle
     const isOpenToggle=()=>{
         setOpenTogle( opentogle => !opentogle)
     }
+
+
     //logo
     const logo = useStaticQuery(getLogo)
     const Image = getImage(logo.logo)
+    //let pathname = window.location.pathname;
+
+       let pathname =  window.location.pathname;
+
+
+    useEffect(()=>{
+        if(window.location.pathname != pathname){
+            setOpenTogle(false)
+        }
+
+    },[opentogle]);
+
 
     return(
         <nav className={styles.navbar}>
@@ -50,7 +65,9 @@ const Nabvar=()=>{
                 {
                  links.map( (link, index) =>{
                      return(
-                     <li key={index}>
+                     <li key={index}
+                     className={pathname===link.path? `${styles.selectPathname}` : null}
+                     >
                          <AniLink 
                          swipe
                          direction="left"
@@ -58,6 +75,7 @@ const Nabvar=()=>{
                          bg="white"           
                          to={link.path} 
                          aria-label="Read more about Seminole tax hike"
+                         className={pathname===link.path ? `${styles.noHover}` : null}
                          >{link.text}</AniLink>
                      </li>
                      )
@@ -75,6 +93,6 @@ const Nabvar=()=>{
          </div>
         </nav>
     )
-}
+} 
 
 export default Nabvar

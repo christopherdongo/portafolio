@@ -15,22 +15,3 @@ const Project=()=>{
 }
 
 export default Project
-
-/*
-{
-    projects:allContentfulProjects{
-      edges{
-        node{
-          contentful_id
-          title
-          slug
-          image{
-            fluid(maxWidth:700 quality:100){
-              ...GatsbyContentfulFluid_tracedSVG
-            }
-        }
-      }
-      }
-    }
-  }
-*/
