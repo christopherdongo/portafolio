@@ -11,8 +11,8 @@ module.exports = {
     data: {name:"christopher", year:29},
     twitterUsername:"@tdhris",
     facebookUsername: "Christopher Dongo H",
-    image:'images/defaultBcg.jpeg',
-    siteUrl:'https://portafoliocd.netlify.app/'
+    image:'src/images/christopher_dongo.jpeg',
+    siteUrl:'https://portafoliomain.gatsbyjs.io/'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

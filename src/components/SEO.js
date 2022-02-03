@@ -32,6 +32,7 @@ const Seo =({title, description,postData, postImage,frontmatter = {} }) => (
     const image = postImage ? `${seo.siteUrl}${postImage}` : seo.image;
     const twitterUsername = seo.twitterUsername;
     const author = seo.author;
+    
     return(
       <>
         <Helmet htmlAttributes={{lang:"en"}} title={`${title} | ${siteTitle}`}> 
