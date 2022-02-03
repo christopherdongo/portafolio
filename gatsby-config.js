@@ -11,7 +11,7 @@ module.exports = {
     data: {name:"christopher", year:29},
     twitterUsername:"@tdhris",
     facebookUsername: "Christopher Dongo H",
-    image:'images/defaultBcg.jpeg',
+    image:'src/assets/images/christopher_dongo.jpg',
     siteUrl:'https://portafoliocd.netlify.app/'
   },
   plugins: [
