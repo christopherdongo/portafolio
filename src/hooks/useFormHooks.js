@@ -5,11 +5,7 @@ import * as styles from "../css/contact.module.css"
 export const useFormHooks = () => {
 
 /*funcion para codificar los datos que se enviara a netlify*/
-  const encode = data => {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&")
-  }
+
   const useForm =()=>(
     <Formik
     initialValues={{
@@ -17,22 +13,29 @@ export const useFormHooks = () => {
       email: "",
       message: "",
     }}
-    onSubmit={(values, actions) => {
-      /*enviar los datos a netlify*/
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...values }),
-      })
-        .then(() => {
-          alert("Su correo se enviado")
-          actions.resetForm()
-        })
-        .catch(() => {
-          alert("Error")
-        })
-        .finally(() => actions.setSubmitting(false))
+    onSubmit={async(values, actions) => {
+      const options = {
+        method:"POST",
+        headers:{
+          "Content-Type":"application/json",
+          "Accept":"application/json",
+        },
+        body: JSON.stringify(values),
+      }
+
+      try{
+       const dat = await fetch('https://us-central1-devter-91343.cloudfunctions.net/sendMailPortafolio/send-email',options)
+       const result = await dat.json();
+        if(result.message) alert('Su correo ha sido Enviado')
+       actions.resetForm();
+      }catch(err){
+        console.log(err)
+      }
+
+      
+     
     }}
+
     validate={values => {
       const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
       const errors = {}
@@ -50,9 +53,7 @@ export const useFormHooks = () => {
   >
     <Form
       className={styles.form}
-      method="POST"
       name="contact"
-      data-netlify={true}
     >
       <h1>Contactame</h1>
       <div>
