@@ -11,7 +11,7 @@ module.exports = {
     data: {name:"christopher", year:29},
     twitterUsername:"@tdhris",
     facebookUsername: "Christopher Dongo H",
-    image:'src/images/christopher_dongo.jpeg',
+    image:'./src/assets/images/christopher_dongo.jpg',
     siteUrl:'https://portafoliomain.gatsbyjs.io/'
   },
   plugins: [
@@ -21,13 +21,6 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/assets/images/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `assets`,
-        path: `${__dirname}/src/assets/`,
       },
     },
     {

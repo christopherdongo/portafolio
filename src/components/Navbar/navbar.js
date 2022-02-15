@@ -4,7 +4,7 @@ import {FaAlignRight} from 'react-icons/fa';
 import links from '../constants/links';
 import socialicons from '../constants/socialicons';
 import AniLink from "gatsby-plugin-transition-link/AniLink";
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage} from "gatsby-plugin-image"
 import {graphql, useStaticQuery} from 'gatsby';
 import {globalHistory} from '@reach/router';
 
@@ -13,7 +13,7 @@ const getLogo = graphql`
 query{
     logo:file(relativePath:{eq:"logo1.png"}){
       childImageSharp{
-       gatsbyImageData(width:150 height:40)
+       gatsbyImageData(width:150 height:40 quality:100 pngOptions:{})
       }
     }
     }
@@ -50,6 +50,7 @@ const Nabvar=()=>{
                          bg="#ffff"  
                  >
                 <GatsbyImage image={Image} alt="imagen del logo"  className={styles.logo} />
+
                  </AniLink>
                  <button type="button" className={styles.logoBtn} onClick={isOpenToggle} aria-label="boton toggle">
                      <FaAlignRight className={styles.logoIcon} />
