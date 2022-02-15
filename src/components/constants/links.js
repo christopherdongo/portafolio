@@ -5,15 +5,15 @@ const links =  [
             text:'Sobre Mi'
         },
         {
-            path:'/habilidades',
+            path:'/habilidades/',
             text:'Habilidades'
         },
         {
-            path:'/proyectos',
+            path:'/proyectos/',
             text:'Proyectos'
         },
         {
-            path:'/contacto',
+            path:'/contacto/',
             text:'Contacto'
         },
         
