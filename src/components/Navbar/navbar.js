@@ -4,9 +4,8 @@ import {FaAlignRight} from 'react-icons/fa';
 import links from '../constants/links';
 import socialicons from '../constants/socialicons';
 import AniLink from "gatsby-plugin-transition-link/AniLink";
-import { GatsbyImage, getImage} from "gatsby-plugin-image"
-import {graphql, useStaticQuery} from 'gatsby';
-import {globalHistory} from '@reach/router';
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import {graphql, useStaticQuery, Link} from 'gatsby';
 
 
 const getLogo = graphql`
@@ -48,6 +47,7 @@ const Nabvar=()=>{
                          direction="left"
                          duration={1.5}
                          bg="#ffff"  
+                         
                  >
                 <GatsbyImage image={Image} alt="imagen del logo"  className={styles.logo} />
 
@@ -59,21 +59,24 @@ const Nabvar=()=>{
 
             <div className={styles.containerLinks}>
             <ul className={opentogle? `${styles.navLinks} ${styles.showNav}` : `${styles.navLinks}`}>
+             
                 {
                  links.map( (link, index) =>{
                      return(
                      <li key={index}
-                     className={pathname===link.path? `${styles.selectPathname}` : null}
+                     
                      >
+                        <Link to={link.path}   activeStyle={{ color: 'hsl(205, 77%, 27%)' }}> {link.text} </Link>
+                        {/*
                          <AniLink 
-                         swipe
+                         fade
                          direction="left"
                          duration={1.5}
                          bg="white"           
                          to={link.path} 
                          aria-label="Read more about Seminole tax hike"
-                         className={pathname===link.path ? `${styles.noHover}` : null}
-                         >{link.text}</AniLink>
+                         
+                     >{link.text}</AniLink> */}
                      </li>
                      )
                  })

@@ -25,6 +25,8 @@ const Seo =({title, description,postData, postImage,frontmatter = {} }) => (
 
   render={({site:{siteMetadata:seo}}) => {
 
+    console.log(frontmatter )
+
     const postMeta = frontmatter || postData.childMarkdownRemark.frontmatter || {};
     const siteDesc = postMeta.siteDesc || seo.siteDesc;
     const siteTitle = postMeta.siteTitle || seo.siteTitle;

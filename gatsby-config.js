@@ -11,8 +11,8 @@ module.exports = {
     data: {name:"christopher", year:29},
     twitterUsername:"@tdhris",
     facebookUsername: "Christopher Dongo H",
-    image:'./src/assets/images/christopher_dongo.jpg',
-    siteUrl:'https://portafoliomain.gatsbyjs.io/'
+    image:'src/assets/images/christopher_dongo.jpg',
+    siteUrl:'https://portafoliocd.netlify.app/'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -26,9 +26,9 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID || 'gfkx4627b3pb',
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
         // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || '4BuRXmFWAlaUFCYCApcd4upDJjLkZUshPIUv35cLj0E',
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
         
       }
     },
