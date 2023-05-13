@@ -1,4 +1,4 @@
-import React, {useState,useEffect} from 'react';
+import React, {useState} from 'react';
 import * as styles from '../../css/navbar.module.css';
 import {FaAlignRight} from 'react-icons/fa';
 import links from '../constants/links';
@@ -20,7 +20,6 @@ query{
 
 const Nabvar=()=>{
     const [opentogle, setOpenTogle] = useState(false)
-    const [pathname, setPathname] = useState('');
 
     //funcion toggle
     const isOpenToggle=()=>{
@@ -31,13 +30,6 @@ const Nabvar=()=>{
     const logo = useStaticQuery(getLogo)
     const Image = getImage(logo.logo)
  
-       useEffect(()=>{
-        if(globalHistory.location){
-           setPathname(globalHistory.location.pathname)
-        }
-        //react-hooks/exhaustive-deps
-       },[pathname])
-
     return(
         <nav className={styles.navbar}>
          <div className={styles.navCenter}>

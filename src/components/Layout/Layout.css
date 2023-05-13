@@ -38,14 +38,13 @@ body{
     font-size: 1rem;  
     position: relative;
     overflow:auto;
-    background: var(--darkGrey);
-    min-height: 100vh;
+    background: var(--mainWhite);
+
 }
 .container-principal{
     display: flex;
     flex-direction: column;
     margin-top: 3.5rem;
-  
   }
 
 
