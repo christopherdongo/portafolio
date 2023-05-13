@@ -101,7 +101,7 @@
       height: 50px;
     }
     .show-nav{
-      height: 900px;
+      height: 100vh;
       transition: var(--mainTransition);
     }
   }
@@ -118,7 +118,7 @@
       align-content: center;
     }
     .container-links{
-      width: 400px;
+      width: 450px;
       justify-content: space-around;
       align-items: center;
 

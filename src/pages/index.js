@@ -8,7 +8,7 @@ const desc =
 
 const Index = () => (
   <Layout>
-    <Seo title="Home" description={desc} />
+    <Seo title="Sobre Mi" description={desc} />
     <Home />
   </Layout>
 )

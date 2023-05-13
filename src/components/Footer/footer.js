@@ -6,7 +6,7 @@ const Footer =()=>{
         <footer className={styles.footer}>
             <div className={styles.footerCenter}>
                 <div className={styles.name}>
-                    <h1>Christopher Dongo Huarancca 2022 <span>&copy;</span></h1>
+                    <h1>Christopher Dongo Huarancca 2023 <span>&copy;</span></h1>
                 </div>
                 <div className={styles.containericons}>
                         {socialicons.map((icons, index)=>{
