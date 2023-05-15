@@ -19,6 +19,7 @@ import StyledComponents from '../../assets/styled.inline.svg';
 import Github from '../../assets/github.inline.svg';
 import Linux from '../../assets/linux.inline.svg';
 import Bash from '../../assets/bash.inline.svg'
+import Google from '../../assets/google_cloud.inline.svg'
 
 
 const skill = [
@@ -135,6 +136,12 @@ const skill = [
     icon:<Contentfull />,
     text:"",
     tech:"Contentfull"
+  },
+  {
+    name:"Google Cloud Platform",
+    icon:<Google />,
+    text:"Me permite utilizar muchos servicios para probar mis desarrollos como cloud run, app engine, etc",
+    tech:"Google Cloud Platform"
   }
 ]
 

@@ -7,10 +7,10 @@ const Project=()=>{
   const {projects} = useProjects();
 
     return(
-        <main className={styles.project}>
+        <div className={styles.project}>
            <h1>Proyectos</h1>
          <CardProject projects={projects}  />
-        </main>
+        </div>
     )
 }
 

@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
+  min-height: 80vh;
 }
 .firs-rows {
   display: flex;

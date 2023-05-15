@@ -16,7 +16,8 @@ const tech = [
         "Gulp":"Gulp",
         "Github":"Github",
         "Linux":"Linux",
-        "Bash":"Bash"
+        "Bash":"Bash",
+        "Google Cloud Platform":"Google Cloud Platform"
     }
 ]
 
