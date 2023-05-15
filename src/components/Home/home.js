@@ -21,7 +21,7 @@ const Home = () => {
   const words=['Frontend.','Developer.'];
 
   return (
-    <main className={styles.container}>
+    <div className={styles.container}>
       <div className={styles.firsRows}>
         <div className={styles.containerImagen}>
          <GatsbyImage image={Image} alt="imagen de photo" className={styles.avatar}/>
@@ -40,7 +40,7 @@ const Home = () => {
           Express, Nodejs para el backend, Nextjs, Gatsby y en especial me gusta mucho la libreria Reactjs.
         </p>
       </div>
-    </main>
+    </div>
   )
 }
 
