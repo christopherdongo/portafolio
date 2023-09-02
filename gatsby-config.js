@@ -14,7 +14,6 @@ module.exports = {
     siteUrl:'https://portafoliocd.netlify.app/'
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
