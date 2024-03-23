@@ -32,15 +32,9 @@ const Nabvar=()=>{
         <nav className={styles.navbar}>
          <div className={styles.navCenter}>
              <div className={styles.navHeader}>
-                 <AniLink to="/" 
-                         swipe
-                         direction="left"
-                         duration={1.5}
-                         bg="#ffff"  
-                         
-                 >
-                <GatsbyImage image={Image} alt="imagen del logo"  className={styles.logo} />
-                 </AniLink>
+             <Link to='/'   activeStyle={{ color: 'hsl(205, 77%, 27%)' }}> 
+             <GatsbyImage image={Image} alt="imagen del logo"  className={styles.logo} />
+             </Link>
                  <button type="button" className={styles.logoBtn} onClick={isOpenToggle} aria-label="boton toggle">
                      <FaAlignRight className={styles.logoIcon} />
                  </button>
@@ -56,16 +50,6 @@ const Nabvar=()=>{
                      
                      >
                         <Link to={link.path}   activeStyle={{ color: 'hsl(205, 77%, 27%)' }}> {link.text} </Link>
-                        {/*
-                         <AniLink 
-                         fade
-                         direction="left"
-                         duration={1.5}
-                         bg="white"           
-                         to={link.path} 
-                         aria-label="Read more about Seminole tax hike"
-                         
-                     >{link.text}</AniLink> */}
                      </li>
                      )
                  })
@@ -85,3 +69,7 @@ const Nabvar=()=>{
 }
 
 export default Nabvar
+
+/*
+                        <Link to={link.path}   activeStyle={{ color: 'hsl(205, 77%, 27%)' }}> {link.text} </Link>
+*/
