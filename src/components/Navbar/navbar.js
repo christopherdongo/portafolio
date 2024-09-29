@@ -11,7 +11,7 @@ const getLogo = graphql`
 query{
     logo:file(relativePath:{eq:"logo1.png"}){
       childImageSharp{
-       gatsbyImageData(width:150 height:40 quality:100 pngOptions:{})
+       gatsbyImageData(layout:CONSTRAINED)
       }
     }
     }

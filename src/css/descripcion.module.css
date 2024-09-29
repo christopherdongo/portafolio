@@ -51,6 +51,8 @@
   object-fit: cover;
   border: 10px solid white;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0px 4px;
+  width: 240px;
+  height: 300px;
 }
 .description {
   margin: 0.5rem;

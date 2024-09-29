@@ -41,8 +41,8 @@
     font-size: 1.5rem;
   }
   .logo{
-    width: 100%;
-    height: auto;
+    width: 140px;
+    height: 40px;
     cursor: pointer;
   }
   .nav-links {

@@ -8,7 +8,7 @@ const getImagenProfile = graphql`
 query{
   defaultphoto:file(relativePath:{eq:"christopher_dongo.jpg"}){
     childImageSharp{
-       gatsbyImageData(width:240 height:300)
+        gatsbyImageData(layout:CONSTRAINED)
     }
   }
   }
@@ -16,7 +16,10 @@ query{
 const Home = () => {
 
   const data = useStaticQuery(getImagenProfile);
+
   const Image = getImage(data.defaultphoto);
+
+  console.log(Image)
  
 
   const words=['Frontend.','Developer.'];
